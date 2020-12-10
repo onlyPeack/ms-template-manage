@@ -206,6 +206,7 @@
     name: 'ms-self-head',
     data() {
       return {
+        navStyle:'',
         isShow: false,
         module:{
           name:'梅施官网头部',
@@ -225,7 +226,7 @@
             }
           ]
         },
-        navStyle:[]
+
       }
     },
     created() {
