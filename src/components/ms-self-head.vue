@@ -224,14 +224,15 @@
               index:1
             }
           ]
-        }
+        },
+        navStyle:[]
       }
     },
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
     },
-    computed:{
-      navStyle:function(){
+    watch:{
+      module:function(){
         let style=[{
           "background-color":this.module.style[0].value
         }]
@@ -240,7 +241,7 @@
             [this.module.style[i].name]:this.module.style[i].value
           })
         }
-        return style
+        this.navStyle=style
       }
     },
     mounted() {
