@@ -230,18 +230,11 @@
     },
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
+      this.computedNavStyle()
     },
     watch:{
       module:function(){
-        let style=[{
-          "background-color":this.module.style[0].value
-        }]
-        for (let i = 2; i <this.module.style.length ; i++) {
-          style.push({
-            [this.module.style[i].name]:this.module.style[i].value
-          })
-        }
-        this.navStyle=style
+        this.computedNavStyle()
       }
     },
     mounted() {
@@ -266,6 +259,17 @@
       },
       setModule(module){
         this.module=module
+      },
+      computedNavStyle(){
+        let style=[{
+          "background-color":this.module.style[0].value
+        }]
+        for (let i = 2; i <this.module.style.length ; i++) {
+          style.push({
+            [this.module.style[i].name]:this.module.style[i].value
+          })
+        }
+        this.navStyle=style
       }
     }
   }
