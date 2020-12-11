@@ -1,24 +1,19 @@
 # ms-template-manage
 
-## Project setup
+## Project install
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install ms-template-manage
 ```
 
-### Compiles and minifies for production
+### Import public css
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+import 'ms-template-manage/src/assets/css/ms-template-manage.css'
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Components import address
+```
+ms-template-manage/src/components
+```
+
+
+

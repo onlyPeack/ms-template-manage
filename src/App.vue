@@ -21,17 +21,6 @@ export default {
 </script>
 
 <style>
-  /*清除公共样式*/
-  @import "./assets/css/reset.css";
-
-  #app {
-    font-family: 'MicrosoftYaHei-Bold';
-  }
-
-  button {
-    cursor: pointer;
-  }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
