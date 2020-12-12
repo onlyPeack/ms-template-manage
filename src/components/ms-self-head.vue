@@ -233,11 +233,6 @@
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedNavStyle()
     },
-    watch:{
-      module:function(){
-        this.computedNavStyle()
-      }
-    },
     mounted() {
       // console.log(window.screen.width,'width')
       //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
@@ -260,6 +255,7 @@
       },
       setModule(module){
         this.module=module
+        this.computedNavStyle()
       },
       computedNavStyle(){
         let style=[{
@@ -271,7 +267,7 @@
           })
         }
         this.navStyle=style
-        console.log(this.navStyle,'style')
+        //console.log(this.navStyle,'style')
       }
     }
   }
