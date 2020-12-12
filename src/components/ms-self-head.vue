@@ -2,7 +2,7 @@
   <nav class="nav" ref="ms-self-head" v-bind:style="navStyle">
     <a href="./index.html">
       <!--            <img src="../image/index/logo.png" alt="logo" class="logo"></a>-->
-      <img src="image/index/logo.png" alt="logo" class="logo"></a>
+      <img :src="module.style[2].value" alt="logo" class="logo"></a>
     <ul class="nav_list">
       <li><span><a href="./index.html">首页</a></span></li>
       <li>
@@ -212,18 +212,26 @@
           name:'梅施官网头部',
           style:[
             {
-              label:'背景色',
+              label:'静默时背景色',
               name:'backgroundColor',
               value:'rgba(0,0,0,0)',
               // value:'red',
-              index:0
+              index:0,
+              type:'style'
             },
             {
-              label:'滚动时背景色',
+              label:'激活时背景色',
               name:'backgroundColor',
               value:'#1E2327',
-              index:1
-            }
+              index:1,
+              type:'style'
+            },
+            {
+              label:'logo地址',
+              value:'http://gxcl-shop.qiniu.520mro.com/3le3x83dr036q266qw9q.png',
+              index:2,
+              type:'default'
+            },
           ]
         },
 
@@ -249,6 +257,11 @@
         }
       }
     },
+    watch:{
+      module:function () {
+        this.computedNavStyle()
+      }
+    },
     methods:{
       getModule(){
         return this.module
@@ -262,12 +275,14 @@
           "backgroundColor":this.module.style[0].value
         }]
         for (let i = 2; i <this.module.style.length ; i++) {
-          style.push({
-            [this.module.style[i].name]:this.module.style[i].value
-          })
+          if(this.module.style.type==='style'){
+            style.push({
+              [this.module.style[i].name]:this.module.style[i].value
+            })
+          }
         }
         this.navStyle=style
-        //console.log(this.navStyle,'style')
+        console.log(this.navStyle,'style')
       }
     }
   }
