@@ -160,7 +160,22 @@
 
 <script>
   export default {
-    name:'ms-self-footer'
+    name:'ms-self-footer',
+    data(){
+      return{
+        module: {
+          name: '梅施官网尾部'
+        },
+      }
+    },
+    methods:{
+      getModule() {
+        return this.module
+      },
+      setModule(module) {
+        this.module = module
+      },
+    }
   }
 </script>
 

@@ -295,7 +295,7 @@
           }
         }
         this.navStyle = style
-        console.log(this.navStyle, 'style')
+        //console.log(this.navStyle, 'style')
       }
     }
   }

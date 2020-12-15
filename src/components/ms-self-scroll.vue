@@ -28,7 +28,10 @@
           first: "可靠的技术架构、流畅的用户体验、",
           second: "贴心的客户服务"
         },
-          {first: "践行梅花精神，不畏艰难，", second: "撬动浩瀚的IT宇宙"}]
+          {first: "践行梅花精神，不畏艰难，", second: "撬动浩瀚的IT宇宙"}],
+        module: {
+          name: '梅施官网轮播'
+        },
         // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']
       }
     },
@@ -40,6 +43,14 @@
       let h = document.documentElement.clientHeight || document.body.clientHeight;
       let header = document.getElementsByTagName('header')[0];
       header.style.height = h + 'px';
+    },
+    methods:{
+      getModule() {
+        return this.module
+      },
+      setModule(module) {
+        this.module = module
+      },
     }
   }
 </script>
