@@ -4,77 +4,21 @@
       <!--            <img src="../image/index/logo.png" alt="logo" class="logo"></a>-->
       <img :src="module.style[2].value" alt="logo" class="logo"></a>
     <ul class="nav_list">
-      <li><span><a href="./index.html">首页</a></span></li>
-      <li>
-        <el-dropdown :show-timeout=0>
+      <li v-for="(item) in module.text[0].children" v-bind:key="item.label">
+        <el-dropdown :show-timeout=0 v-if="item.children&&item.children.length>0">
                   <span class="el-dropdown-link">
-                    产品介绍
+                    {{item.label}}
                   </span>
           <el-dropdown-menu slot="dropdown">
-            <a href="./goods-erp-1.html">
-              <el-dropdown-item>云ERP</el-dropdown-item>
-            </a>
-            <a href="./goods-e-erp.html">
-              <el-dropdown-item>云电商</el-dropdown-item>
-            </a>
-            <a href="./goods-cloud-classRoom.html">
-              <el-dropdown-item>云课堂</el-dropdown-item>
-            </a>
-            <a href="./goods-wms.html">
-              <el-dropdown-item>云仓储</el-dropdown-item>
+            <a :href="child.link" v-for="child in item.children" v-bind:key="child.label">
+              <el-dropdown-item>{{child.label}}</el-dropdown-item>
             </a>
           </el-dropdown-menu>
         </el-dropdown>
+        <span v-else>
+          <a :href="item.link">{{item.label}}</a>
+        </span>
       </li>
-      <li>
-        <el-dropdown :show-timeout=0>
-              <span class="el-dropdown-link">
-                解决方案
-              </span>
-          <el-dropdown-menu slot="dropdown">
-            <a href="./project-erp.html">
-              <el-dropdown-item>电商ERP一体化</el-dropdown-item>
-            </a>
-            <a href="./project-saas.html">
-              <el-dropdown-item>Saas协同云服务</el-dropdown-item>
-            </a>
-            <a href="./project-wms.html">
-              <el-dropdown-item>WMS智能仓储</el-dropdown-item>
-            </a>
-            <a href="./project-make.html">
-              <el-dropdown-item>生产制造ERP</el-dropdown-item>
-            </a>
-          </el-dropdown-menu>
-        </el-dropdown>
-      </li>
-      <li>
-        <el-dropdown :show-timeout=0>
-              <span class="el-dropdown-link">
-                行业赋能
-              </span>
-          <el-dropdown-menu slot="dropdown">
-            <a href="./industry-pim.html">
-              <el-dropdown-item>PIM数据中台</el-dropdown-item>
-            </a>
-            <a href="./industry-wit.html">
-              <el-dropdown-item>工业智库</el-dropdown-item>
-            </a>
-            <a href="./industry-integration.html">
-              <el-dropdown-item>工业物联集成</el-dropdown-item>
-            </a>
-            <a href="./industry-operator.html">
-              <el-dropdown-item>工业电商代运营</el-dropdown-item>
-            </a>
-          </el-dropdown-menu>
-        </el-dropdown>
-      </li>
-      <li><a href="./about-us.html"><span>关于我们</span></a></li>
-      <!--            <li style="width: 100px">-->
-      <!--                <button>登录</button>-->
-      <!--            </li>-->
-      <!--            <li style="width: 100px;margin-left: 15px">-->
-      <!--                <button>注册</button>-->
-      <!--            </li>-->
     </ul>
     <i class="iconfont menuBtn" v-if="!isShow" @click="isShow=!isShow">&#xe653;</i>
     <i class="iconfont menuBtn" v-else @click="isShow=!isShow"
@@ -202,49 +146,118 @@
 
 <script>
 
-  export default{
+  export default {
     name: 'ms-self-head',
     data() {
       return {
-        navStyle:'',
+        navStyle: '',
         isShow: false,
-        module:{
-          name:'梅施官网头部',
-          style:[
+        module: {
+          name: '梅施官网头部',
+          style: [
             {
-              label:'静默时背景色',
-              name:'backgroundColor',
-              value:'rgba(0,0,0,0)',
+              label: '静默时背景色',
+              name: 'backgroundColor',
+              value: 'rgba(0,0,0,0)',
               // value:'red',
-              index:0,
-              type:'style'
+              index: 0,
+              type: 'style'
             },
             {
-              label:'激活时背景色',
-              name:'backgroundColor',
-              value:'#1E2327',
-              index:1,
-              type:'style'
+              label: '激活时背景色',
+              name: 'backgroundColor',
+              value: '#1E2327',
+              index: 1,
+              type: 'style'
             },
             {
-              label:'logo地址',
-              value:'http://gxcl-shop.qiniu.520mro.com/3le3x83dr036q266qw9q.png',
-              index:2,
-              type:'default'
+              label: 'logo地址',
+              value: 'http://gxcl-shop.qiniu.520mro.com/3le3x83dr036q266qw9q.png',
+              index: 2,
+              type: 'default'
             },
+          ],
+          text: [
+            {
+              label: '文字组合1',
+              children: [
+                {
+                  label: '首页',
+                  link: './index.html'
+                },
+                {
+                  label: '产品介绍',
+                  link: '#',
+                  children: [
+                    {
+                      label: '云ERP',
+                      link: '#'
+                    }, {
+                      label: '云电商',
+                      link: '#'
+                    }, {
+                      label: '云课堂',
+                      link: '#'
+                    }, {
+                      label: '云仓储',
+                      link: '#'
+                    }
+                  ]
+                }, {
+                  label: '解决方案',
+                  link: '#',
+                  children: [
+                    {
+                      label: '电商ERP一体化',
+                      link: '#'
+                    }, {
+                      label: 'Saas协同云服务',
+                      link: '#'
+                    }, {
+                      label: 'WMS智能仓储',
+                      link: '#'
+                    }, {
+                      label: '生产制造ERP',
+                      link: '#'
+                    }
+                  ]
+                }, {
+                  label: '行业赋能',
+                  link: '#',
+                  children: [
+                    {
+                      label: 'PIM数据中台',
+                      link: '#'
+                    }, {
+                      label: '工业智库',
+                      link: '#'
+                    }, {
+                      label: '工业物联集成',
+                      link: '#'
+                    }, {
+                      label: '工业电商代运营',
+                      link: '#'
+                    }
+                  ]
+                }, {
+                  label: '关于我们',
+                  link: '#'
+                }
+              ]
+            }
           ]
         },
-
       }
     },
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedNavStyle()
+      console.log(this.getModule(), 'getModule')
     },
     mounted() {
       // console.log(window.screen.width,'width')
       //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
-      window.onscroll =  ()=> {
+      window.onscroll = () => {
         let nav = document.getElementsByClassName("nav")[0];
         let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
         if (window.screen.height >= scrollTop) {
@@ -257,32 +270,32 @@
         }
       }
     },
-    watch:{
-      module:function () {
+    watch: {
+      module: function () {
         this.computedNavStyle()
       }
     },
-    methods:{
-      getModule(){
+    methods: {
+      getModule() {
         return this.module
       },
-      setModule(module){
-        this.module=module
+      setModule(module) {
+        this.module = module
         this.computedNavStyle()
       },
-      computedNavStyle(){
-        let style=[{
-          "backgroundColor":this.module.style[0].value
+      computedNavStyle() {
+        let style = [{
+          "backgroundColor": this.module.style[0].value
         }]
-        for (let i = 2; i <this.module.style.length ; i++) {
-          if(this.module.style.type==='style'){
+        for (let i = 2; i < this.module.style.length; i++) {
+          if (this.module.style.type === 'style') {
             style.push({
-              [this.module.style[i].name]:this.module.style[i].value
+              [this.module.style[i].name]: this.module.style[i].value
             })
           }
         }
-        this.navStyle=style
-        console.log(this.navStyle,'style')
+        this.navStyle = style
+        console.log(this.navStyle, 'style')
       }
     }
   }
