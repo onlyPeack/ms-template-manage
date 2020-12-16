@@ -140,19 +140,20 @@
         </el-menu-item>
       </el-menu>
     </el-collapse-transition>
+
   </nav>
 </template>
 
 <script>
 
   export default {
-    name: 'ms-self-head',
+    name: 'ms-head-test1',
     data() {
       return {
         navStyle: '',
         isShow: false,
         module: {
-          name: '梅施官网头部',
+          name: '头部一号模板(测试)',
           style: [
             {
               label: '静默时背景色',
@@ -185,7 +186,7 @@
               label: '文字组合1',
               children: [
                 {
-                  label: '首页',
+                  label: '这是测试头部',
                   link: './index.html'
                 },
                 {
@@ -224,27 +225,6 @@
                       link: '#'
                     }
                   ]
-                }, {
-                  label: '行业赋能',
-                  link: '#',
-                  children: [
-                    {
-                      label: 'PIM数据中台',
-                      link: '#'
-                    }, {
-                      label: '工业智库',
-                      link: '#'
-                    }, {
-                      label: '工业物联集成',
-                      link: '#'
-                    }, {
-                      label: '工业电商代运营',
-                      link: '#'
-                    }
-                  ]
-                }, {
-                  label: '关于我们',
-                  link: '#'
                 }
               ]
             }
@@ -254,8 +234,8 @@
     },
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
-      this.computedStyle()
-      //console.log(this.getModule(), 'getModule')
+      this.computedNavStyle()
+      console.log(this.getModule(), 'getModule')
     },
     mounted() {
       // console.log(window.screen.width,'width')
@@ -275,7 +255,7 @@
     },
     watch: {
       module: function () {
-        this.computedStyle()
+        this.computedNavStyle()
       }
     },
     methods: {
@@ -284,9 +264,9 @@
       },
       setModule(module) {
         this.module = module
-        this.computedStyle()
+        this.computedNavStyle()
       },
-      computedStyle() {
+      computedNavStyle() {
         let style = [{
           "backgroundColor": this.module.style[0].value
         }]
