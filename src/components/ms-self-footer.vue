@@ -168,13 +168,10 @@
         },
       }
     },
+    created() {
+      //console.log(this.getModule(),'testMix')
+    },
     methods:{
-      getModule() {
-        return this.module
-      },
-      setModule(module) {
-        this.module = module
-      },
     }
   }
 </script>

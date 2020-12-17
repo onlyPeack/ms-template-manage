@@ -13,7 +13,17 @@
 
 <script>
     export default{
-      name:'ms-self-aside'
+      name:'ms-self-aside',
+      data(){
+        return{
+          module: {
+            name: '梅施官网资讯'
+          },
+        }
+      },
+      created() {
+
+      }
     }
 </script>
 

@@ -144,7 +144,6 @@
 </template>
 
 <script>
-
   export default {
     name: 'ms-self-head',
     data() {
@@ -172,7 +171,7 @@
               property:'color'
             },
             {
-              label: 'logo地址',
+              label: 'logo',
               value: 'http://gxcl-shop.qiniu.520mro.com/3le3x83dr036q266qw9q.png',
               index: 2,
               type: 'default',
