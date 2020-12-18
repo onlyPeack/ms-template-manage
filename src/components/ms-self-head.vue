@@ -166,6 +166,7 @@
               label: '激活时背景色',
               name: 'backgroundColor',
               value: '#1E2327',
+              // value: 'red',
               index: 1,
               type: 'style',
               property:'color'
@@ -287,7 +288,8 @@
       },
       computedStyle() {
         let style = [{
-          "backgroundColor": this.module.style[0].value
+          "backgroundColor": this.module.style[0].value,
+          '--activeColor':this.module.style[1].value
         }]
         for (let i = 2; i < this.module.style.length; i++) {
           if (this.module.style.type === 'style') {
@@ -314,7 +316,7 @@
   }
 
   nav:hover {
-    background-color: #1E2327 !important;
+    background-color: var(--activeColor) !important;
   }
 
   nav .menuBtn {

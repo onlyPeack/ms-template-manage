@@ -1,3 +1,14 @@
+node_modules
+
 __tests__
 /coverage
 /public
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
