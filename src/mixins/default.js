@@ -1,3 +1,4 @@
+import '../assets/css/ms-template-manage.css'
 export default {
   data(){
     return{
@@ -7,7 +8,7 @@ export default {
     }
   },
   created(){
-    require('../assets/css/ms-template-manage.css')
+
   },
   methods:{
     getModule() {
