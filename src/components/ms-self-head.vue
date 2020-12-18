@@ -185,7 +185,7 @@
               label: '文字组合1',
               children: [
                 {
-                  label: '首页',
+                  label: '首页1',
                   link: './index.html'
                 },
                 {
@@ -255,7 +255,7 @@
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedStyle()
-      require('../assets/css/ms-template-manage.css')
+      // require('../assets/css/ms-template-manage.css')
       //console.log(this.getModule(), 'getModule')
     },
     mounted() {
