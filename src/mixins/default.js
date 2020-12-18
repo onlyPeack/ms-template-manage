@@ -6,6 +6,9 @@ export default {
       }
     }
   },
+  created(){
+    require('../assets/css/ms-template-manage.css')
+  },
   methods:{
     getModule() {
       return this.module

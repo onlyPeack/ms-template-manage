@@ -255,6 +255,7 @@
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedStyle()
+
       //console.log(this.getModule(), 'getModule')
     },
     mounted() {
