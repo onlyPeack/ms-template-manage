@@ -105,6 +105,9 @@
       header.style.height = h + 'px';
     },
     methods:{
+      getModule() {
+        return this.module
+      },
     }
   }
 </script>
