@@ -97,6 +97,7 @@
     created() {
       this.arrow = window.window.screen.width >= 768 ? 'hover' : 'never'
       this.tabPosition = window.window.screen.width >= 768 ? 'left' : 'top'
+      // console.log(this.getModule())
     },
     mounted() {
       let h = document.documentElement.clientHeight || document.body.clientHeight;
