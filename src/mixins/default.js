@@ -1,4 +1,4 @@
-import '../assets/css/ms-template-manage.css'
+// import '../assets/css/ms-template-manage.css'
 export default {
   data(){
     return{
@@ -8,7 +8,9 @@ export default {
     }
   },
   created(){
-
+    //let a=require('../assets/css/ms-template-manage.css')
+    //require('../assets/css/ms-template-manage.css')
+    //console.log('混入了CSS')
   },
   methods:{
     getModule() {
