@@ -255,7 +255,7 @@
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedStyle()
-
+      require('../assets/css/ms-template-manage.css')
       //console.log(this.getModule(), 'getModule')
     },
     mounted() {
