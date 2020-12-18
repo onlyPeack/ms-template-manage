@@ -185,7 +185,7 @@
               label: '文字组合1',
               children: [
                 {
-                  label: '首页1',
+                  label: '首页2',
                   link: './index.html'
                 },
                 {
