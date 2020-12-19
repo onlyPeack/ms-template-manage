@@ -1,15 +1,22 @@
 <template>
-  <header>
+  <header v-if="!isMobile">
     <el-carousel :arrow="arrow">
       <el-carousel-item v-for="(item,index) in module.text" :key="index" :style="`background-image:url(${module.style[index].value})`">
         <hgroup>
-          <h2>{{ item.children[0].label }}</h2>
-          <h2>{{ item.children[1].label }}</h2>
+          <h2 v-for="textItem in item.children" :key="textItem.label">{{ textItem.label }}</h2>
         </hgroup>
       </el-carousel-item>
     </el-carousel>
   </header>
-
+  <header v-else>
+    <el-carousel :arrow="arrow">
+      <el-carousel-item v-for="(item,index) in module.mobileText" :key="index" :style="`background-image:url(${module.style[index].value})`">
+        <hgroup>
+          <h2 v-for="textItem in item.children" :key="textItem.label">{{ textItem.label }}</h2>
+        </hgroup>
+      </el-carousel-item>
+    </el-carousel>
+  </header>
 </template>
 
 <script>
@@ -54,6 +61,47 @@
               type: 'default',
               property:'img'
             },
+          ],
+          mobileText:[
+            {
+              label:'轮播1',
+              children:[
+                {
+                  label:'用匠心和智慧'
+                },
+                {
+                  label:'打造软件精品'
+                },
+              ]
+            },
+            {
+              label:'轮播2',
+              children:[
+                {
+                  label:'可靠的技术架构'
+                },
+                {
+                  label:'流畅的用户体验'
+                },
+                {
+                  label:'贴心的客户服务'
+                },
+              ]
+            },
+            {
+              label:'轮播3',
+              children:[
+                {
+                  label:'践行梅花精神'
+                },
+                {
+                  label:'不畏艰难'
+                },
+                {
+                  label:'撬动浩瀚的IT宇宙'
+                },
+              ]
+            }
           ],
           text:[
             {
@@ -198,6 +246,7 @@
       font-size: 32pt;
       line-height: 64pt;
       text-align: center;
+      margin-bottom: 0;
     }
   }
 
