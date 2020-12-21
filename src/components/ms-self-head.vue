@@ -152,6 +152,7 @@
         isShow: false,
         module: {
           name: '梅施官网头部',
+          type:'default',
           style: [
             {
               label: '静默时背景色',
@@ -255,7 +256,7 @@
     created() {
       // console.log(this.$refs['ms-self-head'].style,'style')
       this.computedStyle()
-      require('../assets/css/ms-template-manage.css')
+      //require('../assets/css/ms-template-manage.css')
       // console.log(require('../assets/css/ms-template-manage.css'),'css')
       //console.log(this.getModule(), 'getModule')
     },
@@ -307,6 +308,8 @@
   }
 </script>
 <style scoped>
+  @import "../assets/css/ms-template-manage.css";
+  @import "../assets/css/reset.css";
   /*H-nav*/
   nav {
     position: absolute;
