@@ -12,7 +12,7 @@
     components: {
       msSelfScroll: () => import(`../components/ms-self-scroll`),
       msSelfIndexOne: () => import(`../components/default/ms-self-index-1`),
-      msSelfIndexTwo: () => import(`../components/default/ms-self-index-2`),
+      msSelfIndexTwo: () => import(`../components/list/ms-list-test-1`),
     }
   }
 </script>

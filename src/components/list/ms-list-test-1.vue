@@ -1,59 +1,13 @@
 <template>
   <section class="section_card">
     <el-row>
-      <div class="section_first">
+      <div v-bind:class="{section_first:index===0}" v-for="(item,index) in module.article" :key="index">
         <el-col :span="3">
           <el-card :body-style="{ padding: '0px' }" shadow="hover">
-            <img src="http://gxcl-shop.qiniu.520mro.com/po3cw0klbmu3o792x7gg.png">
-            <h1>电商ERP一体化</h1>
-            <h3>专业为工业品销售企业提供电商系统及
-              服务，集成订单管理、供应链管理、商
-              城运营、仓储管理、移动商城等按需定
-              制系统，为企业快速构建..
-            </h3>
+            <img :src="item.pic">
+            <h1>{{item.title}}</h1>
+            <h3>{{item.description}}</h3>
             <el-button type="text" class="button"><a href="project-erp.html">了解更多》</a></el-button>
-          </el-card>
-        </el-col>
-      </div>
-      <div>
-        <el-col :span="3">
-          <el-card :body-style="{ padding: '0px' }" shadow="hover">
-            <img src="http://gxcl-shop.qiniu.520mro.com/161kq321z5l1ixgpkss7.png">
-            <h1>Saas协同云服务</h1>
-            <h3>面向行业应用的新一代智能协同云，实
-              现OA与ERP的完美融合，提供中台服务，
-              连接生产管理、CRM、 项目管理、考勤
-              管理等应用，支持云课堂...
-            </h3>
-            <el-button type="text" class="button"><a href="project-saas.html">了解更多》</a></el-button>
-          </el-card>
-        </el-col>
-      </div>
-      <div>
-        <el-col :span="3">
-          <el-card :body-style="{ padding: '0px' }" shadow="hover">
-            <img src="http://gxcl-shop.qiniu.520mro.com/e1v9ba17uty97hnl6t34.png">
-            <h1>WMS智能仓储</h1>
-            <h3>专业面向MRO工业品领域，针对仓储
-              精细化管理需求，结合实物现场管理与
-              物流执行过程场景，提供仓配一体化解
-              决方案。
-            </h3>
-            <el-button type="text" class="button"><a href="project-wms.html">了解更多》</a></el-button>
-          </el-card>
-        </el-col>
-      </div>
-      <div>
-        <el-col :span="3">
-          <el-card :body-style="{ padding: '0px' }" shadow="hover">
-            <img src="http://gxcl-shop.qiniu.520mro.com/wldqdvn7ap11i8c273uh.png">
-            <h1>生产制造ERP</h1>
-            <h3>打造生产全程信息化、一体化管理，工
-              业领域最佳应用，解决企业成本高，效
-              率低，过程不透明等问题..　　　　
-              　　　　　 　　　
-            </h3>
-            <el-button type="text" class="button"><a href="project-make.html">了解更多》</a></el-button>
           </el-card>
         </el-col>
       </div>
@@ -63,12 +17,39 @@
 
 <script>
   export default {
-    name: "ms-self-index-2",
+    name: "ms-list-test-1",
     data() {
       return {
         module: {
-          name: '梅施官网首页二号模块',
-          type:'default'
+          name: '梅施列表模板测试初号机',
+          type:'list',
+          article:[
+            {
+              title:'电商ERP一体化',
+              pic:'http://gxcl-shop.qiniu.520mro.com/po3cw0klbmu3o792x7gg.png',
+              description:'专业为工业品销售企业提供电商系统及服务，集成订单管理、供应链管理、商城运营、仓储管理、移动商城等按需定制系统，为企业快速构建..',
+            },
+            {
+              title:'Saas协同云服务',
+              pic:'http://gxcl-shop.qiniu.520mro.com/161kq321z5l1ixgpkss7.png',
+              description:'面向行业应用的新一代智能协同云，实现OA与ERP的完美融合，提供中台服务，连接生产管理、CRM、 项目管理、考勤管理等应用，支持云课堂...',
+            },
+            {
+              title:'WMS智能仓储',
+              pic:'http://gxcl-shop.qiniu.520mro.com/e1v9ba17uty97hnl6t34.png',
+              description:'专业面向MRO工业品领域，针对仓储精细化管理需求，结合实物现场管理与物流执行过程场景，提供仓配一体化解决方案。',
+            },
+            {
+              title:'生产制造ERP',
+              pic:'http://gxcl-shop.qiniu.520mro.com/wldqdvn7ap11i8c273uh.png',
+              description:'打造生产全程信息化、一体化管理，工业领域最佳应用，解决企业成本高，效率低，过程不透明等问题..',
+            },
+          ],
+          info:[
+            '顶部图片：文章缩略图',
+            '中间标题：文章标题',
+            '下方文字：文章描述'
+          ]
         }
       }
     }

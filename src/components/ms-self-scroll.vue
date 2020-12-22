@@ -28,6 +28,7 @@
         visible: false,
         tabPosition: 'left',
         timeout: 100,
+        isMobile:false,
         arrow: 'hover',
         // slide: [{
         //   first: "用匠心和智慧打造软件精品",
