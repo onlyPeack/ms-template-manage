@@ -7,12 +7,14 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 // import './assets/css/ms-template-manage.css'
 // import './assets/css/reset.css'
-import mixins from './mixins/default'
+import msTemplateManage from './components/index'
+
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueRouter)
-Vue.mixin(mixins)
+
+Vue.use(msTemplateManage)
 new Vue({
   render: h => h(App),
   router
