@@ -264,16 +264,21 @@
       // console.log(window.screen.width,'width')
       //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
       window.onscroll = () => {
-        let nav = document.getElementsByClassName("nav")[0];
-        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        if (window.screen.height >= scrollTop) {
-          nav.style.top = scrollTop + 'px';
+        try {
+          let nav = document.getElementsByClassName("nav")[0];
+          let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+          if (window.screen.height >= scrollTop) {
+            nav.style.top = scrollTop + 'px';
+          }
+
+          //console.log("这是在组件里的事件")
+          if (window.screen.width >= 768) {
+            nav.style.backgroundColor = scrollTop === 0 ? this.module.style[0].value : this.module.style[1].value
+          }
+        }catch (e) {
+          console.log(e)
         }
 
-        //console.log("这是在组件里的事件")
-        if (window.screen.width >= 768) {
-          nav.style.backgroundColor = scrollTop === 0 ? this.module.style[0].value : this.module.style[1].value
-        }
       }
     },
     watch: {

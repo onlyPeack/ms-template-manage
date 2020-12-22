@@ -110,6 +110,7 @@
 
   .section_card div .button {
     margin-top: 10px;
+    padding-bottom: 30px;
   }
 
   .section_card div .button a {
