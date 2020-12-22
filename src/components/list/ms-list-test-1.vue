@@ -82,7 +82,7 @@
 
   .section_card div .el-col-3 {
     width: 15.62% !important;
-    height: 18.54vw !important;
+    height: 19.54vw !important;
   }
 
   .section_card .section_first .el-col-3 {
@@ -94,7 +94,7 @@
   }
 
   .section_card div .el-col-3 .el-card__body {
-    height: 18.54vw !important;
+    height: 19.54vw !important;
   }
 
   .section_card div h3 {
