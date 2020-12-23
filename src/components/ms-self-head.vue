@@ -282,16 +282,16 @@
       }
     },
     watch: {
-      module: function () {
-        this.computedStyle()
-      }
+      // module: function () {
+      //   this.computedStyle()
+      // }
     },
     methods: {
       getModule() {
         return this.module
       },
       setModule(module) {
-        this.module = Object.assign({},module)
+        this.module = Object.assign(this.module,module)
         this.computedStyle()
       },
       computedStyle() {
