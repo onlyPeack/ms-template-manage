@@ -291,7 +291,7 @@
         return this.module
       },
       setModule(module) {
-        this.module = module
+        this.module = Object.assign({},module)
         this.computedStyle()
       },
       computedStyle() {
