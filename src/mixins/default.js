@@ -19,7 +19,7 @@ export default {
       return this.module
     },
     setModule(module) {
-      this.module = module
+      this.module = Object.assign(this.module,module)
     },
     client(){
       if (window.innerHeight !== undefined) {

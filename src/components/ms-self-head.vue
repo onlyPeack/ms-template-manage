@@ -346,7 +346,7 @@
     font-weight: bold;
     text-align: center;
     position: absolute;
-    top: 0.67vw;
+    top: -0.1vw;
     right: 3.33vw;
   }
 

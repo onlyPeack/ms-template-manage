@@ -16,10 +16,8 @@
 </template>
 
 <script>
-  import mixins from '../../mixins/default'
   export default {
     name: "ms-list-test-1",
-    mixin:[mixins],
     data() {
       return {
         module: {

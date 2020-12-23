@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-<!--    <ms-self-head ref="msHead"></ms-self-head>-->
+    <ms-self-head ref="msHead"></ms-self-head>
 <!--&lt;!&ndash;    <el-button type="primary" style="margin-top: 120px;" @click="test">777</el-button>&ndash;&gt;-->
 <!--    <router-view/>-->
 
 <!--    <ms-self-footer ref="msFooter"></ms-self-footer>-->
-    <ms-list-test-1></ms-list-test-1>
+<!--    <ms-list-test-1></ms-list-test-1>-->
   </div>
 </template>
 
@@ -35,5 +35,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   position: relative;
+  min-height: 400px;
 }
 </style>
