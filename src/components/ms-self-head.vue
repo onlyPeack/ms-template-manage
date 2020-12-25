@@ -178,8 +178,14 @@
               index: 2,
               type: 'default',
               property:'img'
-
             },
+            {
+              label: '字体大小',
+              name:'fontSize',
+              value: '16px',
+              index:3,
+              type: 'style'
+            }
           ],
           text: [
             {
