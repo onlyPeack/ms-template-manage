@@ -190,6 +190,7 @@
           text: [
             {
               label: '文字组合1',
+              type:'nav',
               children: [
                 {
                   label: '首页',

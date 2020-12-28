@@ -33,36 +33,29 @@ module: {
       name: css-name,       css属性名
       value: String,        css属性值
       index: 0,             在Style中的索引(暂未使用)
-      type: 'style',
-      property:'color'
+      type: style/default,  属性类型(样式,图片)
+      property:color/img    样式类型(颜色,图片)
     }
   ],
   text: [                   组件公开文案
     {
-      label: '文字组合1',
+      label: String,        文案组名称
+      type:nav/default      文案类型(导航,基础)
       children: [
         {
-          label: '产品介绍',
-          link: '#',
+          label: String,    文案名称
+          link: '#',        文案链接
           children: [
             {
               label: '云ERP',
-              link: '#'
-            }, {
-              label: '云电商',
-              link: '#'
-            }, {
-              label: '云课堂',
-              link: '#'
-            }, {
-              label: '云仓储',
               link: '#'
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  info:[String,String]      模板对外公开信息
 },
 
 ```

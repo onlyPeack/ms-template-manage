@@ -2,8 +2,11 @@
   <div class="list-genshin">
     <ul class="list-genshin-list">
       <li class="list-genshin-item" v-for="(item,index) in module.article" :key="index">
-        <img src="http://gxcl-shop.qiniu.520mro.com/mx76lh9xv1nr88roi3ej.jpg" alt="">
-        <h2>{{item.title}}</h2>
+        <img :src="item.pic" alt="">
+        <router-link :to="item.link">
+          <h2>{{item.title}}</h2>
+        </router-link>
+
         <div class="list-genshin-item-time">
           <span style="color: #999;margin-right: 60px;">{{item.releaseTime}}</span>
           <span style="color: #ffc000">新闻</span>
@@ -24,27 +27,31 @@
           article: [
             {
               title: '电商ERP一体化',
-              pic: 'http://gxcl-shop.qiniu.520mro.com/po3cw0klbmu3o792x7gg.png',
+              pic: 'http://gxcl-shop.qiniu.520mro.com/mx76lh9xv1nr88roi3ej.jpg',
               description: '专业为工业品销售企业提供电商系统及服务，集成订单管理、供应链管理、商城运营、仓储管理、移动商城等按需定制系统，为企业快速构建..',
-              releaseTime: '2020-12-25'
+              releaseTime: '2020-12-25',
+              link:'#'
             },
             {
               title: 'Saas协同云服务',
-              pic: 'http://gxcl-shop.qiniu.520mro.com/161kq321z5l1ixgpkss7.png',
+              pic: 'http://gxcl-shop.qiniu.520mro.com/mx76lh9xv1nr88roi3ej.jpg',
               description: '面向行业应用的新一代智能协同云，实现OA与ERP的完美融合，提供中台服务，连接生产管理、CRM、 项目管理、考勤管理等应用，支持云课堂...',
-              releaseTime: '2020-12-25'
+              releaseTime: '2020-12-25',
+              link:'#'
             },
             {
               title: 'WMS智能仓储',
-              pic: 'http://gxcl-shop.qiniu.520mro.com/e1v9ba17uty97hnl6t34.png',
+              pic: 'http://gxcl-shop.qiniu.520mro.com/mx76lh9xv1nr88roi3ej.jpg',
               description: '专业面向MRO工业品领域，针对仓储精细化管理需求，结合实物现场管理与物流执行过程场景，提供仓配一体化解决方案。',
-              releaseTime: '2020-12-25'
+              releaseTime: '2020-12-25',
+              link:'#'
             },
             {
               title: '生产制造ERP',
-              pic: 'http://gxcl-shop.qiniu.520mro.com/wldqdvn7ap11i8c273uh.png',
+              pic: 'http://gxcl-shop.qiniu.520mro.com/mx76lh9xv1nr88roi3ej.jpg',
               description: '打造生产全程信息化、一体化管理，工业领域最佳应用，解决企业成本高，效率低，过程不透明等问题..',
-              releaseTime: '2020-12-25'
+              releaseTime: '2020-12-25',
+              link:'#'
             },
           ],
           info: [
