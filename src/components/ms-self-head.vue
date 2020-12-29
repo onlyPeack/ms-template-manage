@@ -321,7 +321,6 @@
 </script>
 <style scoped>
   @import "../assets/css/ms-template-manage.css";
-  @import "../assets/css/reset.css";
   /*H-nav*/
   nav {
     position: absolute;
