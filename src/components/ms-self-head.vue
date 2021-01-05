@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav ms-self-head" v-bind:style="navStyle">
+  <nav class="nav ms-self-head" id="ms-self-head">
     <a href="./index.html">
       <img :src="module.style[2].value" alt="logo" class="logo"></a>
     <ul class="nav_list">
@@ -149,13 +149,15 @@
       return {
         navStyle: '',
         isShow: false,
+
         module: {
           name: '梅施官网头部',
           type:'default',
+          classId:'ms-self-head',
           style: [
             {
               label: '静默时背景色',
-              name: 'backgroundColor',
+              name: '--defaultColor',
               value: 'rgba(0,0,0,0)',
               // value:'red',
               index: 0,
@@ -164,7 +166,7 @@
             },
             {
               label: '激活时背景色',
-              name: 'backgroundColor',
+              name: '--activeColor',
               value: '#1E2327',
               // value: 'red',
               index: 1,
@@ -180,8 +182,8 @@
             },
             {
               label: '字体大小',
-              name:'fontSize',
-              value: '16px',
+              name:'--fontSize',
+              value: '0.83vw',
               index:3,
               type: 'style'
             }
@@ -259,13 +261,6 @@
         },
       }
     },
-    created() {
-      // console.log(this.$refs['ms-self-head'].style,'style')
-      this.computedStyle()
-      //require('../assets/css/ms-template-manage.css')
-      // console.log(require('../assets/css/ms-template-manage.css'),'css')
-      //console.log(this.getModule(), 'getModule')
-    },
     mounted() {
       // console.log(window.screen.width,'width')
       //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
@@ -287,41 +282,14 @@
 
       }
     },
-    watch: {
-      // module: function () {
-      //   this.computedStyle()
-      // }
-    },
-    methods: {
-      getModule() {
-        return this.module
-      },
-      setModule(module) {
-        this.module = Object.assign(this.module,module)
-        this.computedStyle()
-      },
-      computedStyle() {
-        let style = [{
-          "backgroundColor": this.module.style[0].value,
-          '--activeColor':this.module.style[1].value
-        }]
-        for (let i = 2; i < this.module.style.length; i++) {
-          if (this.module.style.type === 'style') {
-            style.push({
-              [this.module.style[i].name]: this.module.style[i].value
-            })
-          }
-        }
-        this.navStyle = style
-        //console.log(this.navStyle, 'style')
-      }
-    }
   }
 </script>
 <style scoped>
   @import "../assets/css/ms-template-manage.css";
   .ms-self-head{
-    --activeColor:'#1E2327'
+    --activeColor:'';
+    --defaultColor:'';
+    --fontSize:''
   }
   /*H-nav*/
   nav {
@@ -331,6 +299,7 @@
     z-index: 666;
     width: 100%;
     height: 3.12vw;
+    background-color: var(--defaultColor);
   }
 
   nav:hover {
@@ -350,7 +319,7 @@
   .nav_list {
     color: white;
     display: inline-block;
-    font-size: 0.83vw;
+    font-size: var(--fontSize);
     font-weight: bold;
     text-align: center;
     position: absolute;

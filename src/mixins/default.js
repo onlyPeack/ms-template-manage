@@ -48,7 +48,9 @@ export default {
       //console.log(this.module,'module')
       let root=document.getElementById(this.module.classId)
       for (let i = 0; i <styleArr.length ; i++) {
-        root.style.setProperty(styleArr[i].name,styleArr[i].value)
+        if(styleArr[i].name&&styleArr[i].name!==''){
+          root.style.setProperty(styleArr[i].name,styleArr[i].value)
+        }
       }
     }
   },

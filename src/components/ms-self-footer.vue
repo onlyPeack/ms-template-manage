@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="ms-self-footer">
         <section class="T_footer PC">
             <div class="T_footer_first">
                 <h3><a href="../goods-erp-1.html">云ERP</a></h3>
@@ -26,7 +26,9 @@
                 <a style="margin-left: 15px;cursor: pointer" href="https://beian.miit.gov.cn" target="_blank">苏ICP备20015156号</a>
                 <span style="margin: 0 10px">|</span>
                 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32050902101170">
-                    <img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png" alt="" style="height: 15px;width: 15px;vertical-align: sub;cursor: pointer" class="canClick"><span style="cursor: pointer" class="canClick">苏公网安备</span>
+                    <img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png" alt=""
+                         style="height: 15px;width: 15px;vertical-align: sub;cursor: pointer" class="canClick"><span
+                        style="cursor: pointer" class="canClick">苏公网安备</span>
                     32050902101170
                 </a>
 
@@ -143,14 +145,20 @@
                 </el-menu>
             </el-collapse-transition>
             <div style="padding: 20px;font-size: 10pt;width: 100%">
-                <span>QQ：3376893959</span><div style="height: 10pt"></div>
-                <span>手机：17368056998</span><div style="height: 10pt"></div>
-                <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt"><div style="height: 10pt"></div>
+                <span>QQ：3376893959</span>
+                <div style="height: 10pt"></div>
+                <span>手机：17368056998</span>
+                <div style="height: 10pt"></div>
+                <img src="http://gxcl-shop.qiniu.520mro.com/y8m3qc0qcxvwfh8i7yv2.png" alt="梅施logo" style="width: 100pt">
+                <div style="height: 10pt"></div>
                 <span>关注梅施科技</span>
                 <div style="border-bottom: 1px solid #31393C;height: 20pt;width: 100%;margin-bottom: 10pt;"></div>
-                <span>Copyright©2018-2040</span><div style="height: 10pt"></div>
-                <span>梅施信息科技有限公司All Rights Reserved</span><div style="height: 10pt"></div>
-                <span>苏ICP备20015156号-1 | </span><img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png" alt=""><span>苏公网安备32050902101170</span>
+                <span>Copyright©2018-2040</span>
+                <div style="height: 10pt"></div>
+                <span>梅施信息科技有限公司All Rights Reserved</span>
+                <div style="height: 10pt"></div>
+                <span>苏ICP备20015156号-1 | </span><img src="http://gxcl-shop.qiniu.520mro.com/cq2enwe9s8mfuf0c91pu.png"
+                                                     alt=""><span>苏公网安备32050902101170</span>
             </div>
 
         </section>
@@ -159,105 +167,123 @@
 </template>
 
 <script>
-  export default {
-    name:'ms-self-footer',
-    data(){
-      return{
-        module: {
-          name: '梅施官网尾部'
+    export default {
+        name: 'ms-self-footer',
+        data() {
+            return {
+                module: {
+                    name: '梅施官网尾部',
+                    id: 'ms-self-footer'
+                },
+            }
         },
-      }
-    },
-    created() {
-      // console.log(this.getModule(),'testMix')
-    },
-    methods:{
+        created() {
+            // console.log(this.getModule(),'testMix')
+        },
+        methods: {}
     }
-  }
 </script>
 
 <style scoped>
-    .PC{
+    .PC {
         display: block;
     }
-    .Phone{
+
+    .Phone {
         display: none;
     }
-    .T_footer{
+
+    .T_footer {
         height: 23.02vw;
         background-image: url('http://gxcl-shop.qiniu.520mro.com/agh4behizq7i0w88u9x4.png');
         background-size: contain;
         background-repeat: no-repeat;
-        color: rgb(191,193,195);
+        color: rgb(191, 193, 195);
         text-align: left;
     }
-    .T_footer h3{
+
+    .T_footer h3 {
         font-weight: 400;
         font-family: 微软雅黑;
         margin-bottom: 11.78%;
         font-size: 0.72vw;
     }
-    .T_footer a{
-        color: rgba(255,255,255,.5);
+
+    .T_footer a {
+        color: rgba(255, 255, 255, .5);
     }
-    .T_footer a:hover{
+
+    .T_footer a:hover {
         color: white;
     }
-    .T_footer>div{
+
+    .T_footer > div {
         float: left;
     }
-    .T_footer_first{
+
+    .T_footer_first {
         width: 10.57%;
         padding-top: 4.94vw;
         margin-left: 40%;
     }
-    .T_footer_second{
+
+    .T_footer_second {
         padding-top: 4.94vw;
         width: 12.55%;
     }
-    .T_footer_third{
+
+    .T_footer_third {
         padding-top: 4.94vw;
         width: 12.44%;
     }
-    .T_footer .T_footer_copyright{
+
+    .T_footer .T_footer_copyright {
         float: right;
         margin-right: 18.96%;
         margin-top: 6vw;
-        color: rgba(255,255,255,.5) !important;
+        color: rgba(255, 255, 255, .5) !important;
     }
-    .canClick{
+
+    .canClick {
         cursor: pointer;
     }
-    .canClick:hover{
-        color:rgb(255,255,255) !important
+
+    .canClick:hover {
+        color: rgb(255, 255, 255) !important
     }
 
     @media screen and (max-width: 768px) {
-        .PC{
+        .PC {
             display: none;
         }
-        .Phone{
+
+        .Phone {
             display: inline-block;
         }
-        .T_footer{
+
+        .T_footer {
             background-color: #283036;
-            background-image:unset;
+            background-image: unset;
             height: auto;
             margin-top: 20pt;
             width: 100%;
         }
-        .T_footer .el-menu{
+
+        .T_footer .el-menu {
             background-color: unset;
         }
-        .T_footer:after{
+
+        .T_footer:after {
             content: '';
             clear: both;
             display: table;
         }
-        .T_footer .el-submenu__title{
-            color: rgba(255,255,255,.7)!important;
+
+        .T_footer .el-submenu__title {
+            color: rgba(255, 255, 255, .7) !important;
         }
-        .T_footer .el-submenu__title:hover{
+
+        .T_footer .el-submenu__title:hover {
             background-color: unset;
         }
     }

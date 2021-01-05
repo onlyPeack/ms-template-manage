@@ -87,8 +87,8 @@
 
 <style scoped>
   .list-genshin {
-    --item-height:'';
-    --item-bg-color:'';
+    --itemHeight:'';
+    --itemBgColor:'';
 
 
     background-color: rgb(240, 240, 240);
@@ -102,8 +102,8 @@
     margin: 0 auto;
   }
   .list-genshin-item{
-    min-height: var(--item-height);
-    background-color: var(--item-bg-color);
+    min-height: var(--itemHeight);
+    background-color: var(--itemBgColor);
     padding: 20px;
     border-radius: 5px;
     position: relative;
