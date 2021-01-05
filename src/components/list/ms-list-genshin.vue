@@ -1,7 +1,7 @@
 <template>
-  <div class="list-genshin">
+  <div class="list-genshin" id="list-genshin">
     <ul class="list-genshin-list">
-      <li class="list-genshin-item" v-for="(item,index) in module.article" :key="index">
+      <li class="list-genshin-item" v-for="(item) in articleList" v-bind:key="item.title">
         <img :src="item.pic" alt="">
         <router-link :to="item.link">
           <h2>{{item.title}}</h2>
@@ -24,6 +24,8 @@
         module: {
           name: 'genshin新闻',
           type: 'list',
+          limit:3,
+          classId:'list-genshin',
           article: [
             {
               title: '电商ERP一体化',
@@ -54,6 +56,19 @@
               link:'#'
             },
           ],
+          style:[
+            {
+              label:'行高：',
+              name:'--item-height',
+              value:'140px'
+            },
+            {
+              label:'背景色：',
+              name:'--item-bg-color',
+              value:'#ffffff',
+              property:'color'
+            },
+          ],
           info: [
             '左侧图片：文章缩略图',
             '标题：文章标题',
@@ -61,12 +76,21 @@
           ]
         }
       }
-    }
+    },
+    computed:{
+      articleList:function(){
+        return this.module.article.slice(0,this.module.limit)
+      }
+    },
   }
 </script>
 
 <style scoped>
   .list-genshin {
+    --item-height:'';
+    --item-bg-color:'';
+
+
     background-color: rgb(240, 240, 240);
     min-height: 400px;
     padding-top: 50px;
@@ -78,8 +102,8 @@
     margin: 0 auto;
   }
   .list-genshin-item{
-    min-height: 140px;
-    background-color: #fff;
+    min-height: var(--item-height);
+    background-color: var(--item-bg-color);
     padding: 20px;
     border-radius: 5px;
     position: relative;

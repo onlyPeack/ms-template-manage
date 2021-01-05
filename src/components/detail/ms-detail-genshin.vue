@@ -44,7 +44,7 @@
     background-image: url('http://gxcl-shop.qiniu.520mro.com/wmjyadys6k0k9rtzz8i2.jpg');
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
   }
   .detail-genshin-body{
     margin-top: 90px;

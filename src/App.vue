@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 <!--    <ms-self-head ref="msHead"></ms-self-head>-->
-    <ms-detail-genshin></ms-detail-genshin>
+    <ms-list-genshin></ms-list-genshin>
 <!--&lt;!&ndash;    <el-button type="primary" style="margin-top: 120px;" @click="test">777</el-button>&ndash;&gt;-->
 <!--    <router-view/>-->
 

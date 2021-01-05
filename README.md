@@ -26,11 +26,13 @@ ms-template-manage/src/components
 ```
 module: {
   name: String,             组件名(仅用作展示)
+  classId:String            最外层classId
   type:default/list/detail, 组件类型(基础,列表,详情)
+  limit:Number              最大展示数量
   style: [                  组件公开样式
     {
       label: String,
-      name: css-name,       css属性名
+      name: css-var-name,   css自定义变量名
       value: String,        css属性值
       index: 0,             在Style中的索引(暂未使用)
       type: style/default,  属性类型(样式,图片)

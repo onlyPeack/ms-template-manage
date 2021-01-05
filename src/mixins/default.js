@@ -3,7 +3,8 @@ export default {
   data(){
     return{
       module:{
-
+        classId:'',
+        style:[]
       },
       isMobile:false
     }
@@ -20,6 +21,9 @@ export default {
     },
     setModule(module) {
       this.module = Object.assign(this.module,module)
+      if(this.module.style.length>0){
+        this.setStyle(this.module.style)
+      }
     },
     client(){
       if (window.innerHeight !== undefined) {
@@ -38,6 +42,19 @@ export default {
           "height": document.body.clientHeight
         }
       }
+    },
+
+    setStyle(styleArr){
+      //console.log(this.module,'module')
+      let root=document.getElementById(this.module.classId)
+      for (let i = 0; i <styleArr.length ; i++) {
+        root.style.setProperty(styleArr[i].name,styleArr[i].value)
+      }
+    }
+  },
+  mounted(){
+    if(this.module.style.length>0){
+      this.setStyle(this.module.style)
     }
   }
 }

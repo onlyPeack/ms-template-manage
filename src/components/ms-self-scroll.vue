@@ -23,7 +23,7 @@
 
   export default {
     name: "ms-self-scroll",
-    data: function () {
+    data() {
       return {
         visible: false,
         tabPosition: 'left',

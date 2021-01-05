@@ -1,7 +1,6 @@
 <template>
-  <nav class="nav" ref="ms-self-head" v-bind:style="navStyle">
+  <nav class="nav ms-self-head" v-bind:style="navStyle">
     <a href="./index.html">
-      <!--            <img src="../image/index/logo.png" alt="logo" class="logo"></a>-->
       <img :src="module.style[2].value" alt="logo" class="logo"></a>
     <ul class="nav_list">
       <li v-for="(item) in module.text[0].children" v-bind:key="item.label">
@@ -272,7 +271,7 @@
       //监听滚动条是否在最顶部,如果不是则给导航条黑色背景色
       window.onscroll = () => {
         try {
-          let nav = document.getElementsByClassName("nav")[0];
+          let nav = document.getElementsByClassName("ms-self-head")[0];
           let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
           if (window.screen.height >= scrollTop) {
             nav.style.top = scrollTop + 'px';
@@ -321,6 +320,9 @@
 </script>
 <style scoped>
   @import "../assets/css/ms-template-manage.css";
+  .ms-self-head{
+    --activeColor:'#1E2327'
+  }
   /*H-nav*/
   nav {
     position: absolute;
