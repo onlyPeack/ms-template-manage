@@ -158,7 +158,7 @@
                 <div class="wrap">
                     <div class="company_column_img">
                         <a href="about.html" target="_blank">
-                            <img src="Img/index/company.jpg"
+                            <img src="http://www.hejigy.com/Img/index/company.jpg"
                                  width="600" height="350" alt="公司简介"
                                  style="position: absolute;padding: 25px 0;width: 600px;height: 87.5%;"/>
                         </a>
@@ -539,6 +539,12 @@
         },
         mounted() {
             document.getElementById("menu1").className = "on";
+            let s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.src = 'http://www.hejigy.com/Scripts/index.js';
+            document.body.appendChild(s);
+            // s.src = '../../../public/js/Scripts/jquery.min.js';
+            // document.body.appendChild(s);
         }
     }
 </script>
