@@ -538,7 +538,7 @@
           }
         },
         mounted() {
-            document.getElementById("menu1").className = "on";
+            // document.getElementById("menu1").className = "on";
             let s = document.createElement('script');
             s.type = 'text/javascript';
             s.src = 'http://www.hejigy.com/Scripts/index.js';

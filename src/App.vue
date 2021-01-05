@@ -8,7 +8,7 @@
 <!--    <ms-self-footer ref="msFooter"></ms-self-footer>-->
 <!--    <ms-list-test-1></ms-list-test-1>-->
     <hj-head></hj-head>
-      <hj-index></hj-index>
+      <hj-brand></hj-brand>
       <hj-footer></hj-footer>
   </div>
 </template>

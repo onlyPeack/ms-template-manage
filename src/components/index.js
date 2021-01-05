@@ -9,6 +9,7 @@ import msDetailGenshin from './detail/ms-detail-genshin'
 import hjHead from './head/hj-head'
 import hjFooter from './footer/hj-footer'
 import hjIndex from './page/hj-index'
+import hjBrand from './page/hj-brand'
 
 import mixins from '../mixins/default'
 let Ms={}
@@ -25,5 +26,6 @@ Vue.component(msDetailGenshin.name,msDetailGenshin)
 Vue.component(hjHead.name,hjHead)
 Vue.component(hjFooter.name,hjFooter)
 Vue.component(hjIndex.name,hjIndex)
+Vue.component(hjBrand.name,hjBrand)
 }
 export default  Ms
