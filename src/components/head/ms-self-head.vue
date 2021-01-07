@@ -285,7 +285,7 @@
   }
 </script>
 <style scoped>
-  @import "../assets/css/ms-template-manage.css";
+  @import "../../assets/css/ms-template-manage.css";
   .ms-self-head{
     --activeColor:'';
     --defaultColor:'';

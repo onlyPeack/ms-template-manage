@@ -77,11 +77,7 @@
         }
       }
     },
-    computed:{
-      articleList:function(){
-        return this.module.article.slice(0,this.module.limit)
-      }
-    },
+
   }
 </script>
 

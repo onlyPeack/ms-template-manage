@@ -1,5 +1,5 @@
 import { shallowMount,mount } from '@vue/test-utils';
-import msSelfHead from '../ms-self-head'
+import msSelfHead from '../head/ms-self-head'
 import Vue from 'vue'
 import ElementUI from 'element-ui';
 Vue.use(ElementUI)

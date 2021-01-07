@@ -15,6 +15,13 @@ export default {
     //console.log('混入了CSS')
     this.isMobile=this.client().width<768
   },
+  computed:{
+    articleList:function(){
+      if(this.module.type==='list'){
+        return this.module.article.slice(0,this.module.limit||0)
+      }
+    }
+  },
   methods:{
     getModule() {
       return this.module

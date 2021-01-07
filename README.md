@@ -46,6 +46,7 @@ module: {
       children: [
         {
           label: String,    文案名称
+          value: String,    文案值
           link: '#',        文案链接
           children: [
             {
@@ -57,6 +58,15 @@ module: {
       ]
     }
   ],
+  article: [                组件类型为列表时
+    {
+      title:String ,        标题
+      pic:String,           图片
+      description:String,   描述
+      releaseTime: String,  发布时间
+      link:String           链接
+    },
+  ]
   info:[String,String]      模板对外公开信息
 },
 
