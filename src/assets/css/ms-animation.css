@@ -1,0 +1,39 @@
+/*主体由下方淡入,下方元素被挤下*/
+@keyframes titleTranslate {
+    from {
+        margin-bottom:-30px;
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        margin-bottom: 30px;
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*主体由下方淡入*/
+@keyframes titleTranslateNoVolume {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/*主体隐藏一半时间后由左侧飞入*/
+@keyframes leftFormFlyIn {
+    0%{
+        transform: translateX(-100vw);
+    }
+    50%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+

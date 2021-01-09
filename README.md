@@ -10,6 +10,11 @@ npm install ms-template-manage
 import 'ms-template-manage/src/assets/css/ms-template-manage.css'
 ```
 
+### Import animation
+```
+import 'ms-template-manage/src/assets/css/ms-animation.css'
+```
+
 ### Use
 ```
 import ms-template-manage form 'ms-template-manage'

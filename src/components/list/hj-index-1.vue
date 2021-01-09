@@ -67,6 +67,30 @@
                             ]
                         }
                     ],
+                    style:[
+                        {
+                            label:'左侧文字颜色',
+                            name:'--leftColor',
+                            value:'rgba(84,84,84,1)',
+                            property:'color'
+                        },
+                        {
+                            label:'左侧文字大小',
+                            name:'--leftFontSize',
+                            value:'20px',
+                        },
+                        {
+                            label:'右侧文字颜色',
+                            name:'--rightColor',
+                            value:'rgba(149,208,255,1)',
+                            property:'color'
+                        },
+                        {
+                            label:'右侧文字大小',
+                            name:'--rightFontSize',
+                            value:'24px',
+                        },
+                    ],
                     info: [
                         '顶部图片：文章缩略图',
                         '中间标题：文章标题',
@@ -101,23 +125,29 @@
 
 <style scoped>
     #hj-index-1 {
+        --leftColor:'';
+        --leftFontSize:'';
+        --rightColor:'';
+        --rightFontSize:'';
+
+
         width: 1200px;
         height: 540px;
         margin: 0 auto;
 
     }
     #hj-index-1 h2{
-        font-size: 20px;
-        color: rgba(84,84,84,1);
+        font-size: var(--leftFontSize);
+        color: var(--leftColor);
         font-weight: normal;
         margin-bottom: 30px;
         margin-top: 30px;
         text-align: center;
     }
     #hj-index-1 h2 span{
-        font-size: 24px;
+        font-size: var(--rightFontSize);
         margin-left: 5px;
-        color: rgba(149,208,255,1);
+        color: var(--rightColor);
     }
     .banner-item{
         width: 370px;
@@ -179,16 +209,5 @@
     #hj-index-1 .el-carousel__indicator.is-active button {
         background-color: rgba(104,171,250,1);
     }
-    @keyframes titleTranslate {
-        from {
-            margin-bottom:-30px;
-            transform: translateY(60px);
-            opacity: 0;
-        }
-        to {
-            margin-bottom: 30px;
-            transform: translateY(0px);
-            opacity: 1;
-        }
-    }
+
 </style>

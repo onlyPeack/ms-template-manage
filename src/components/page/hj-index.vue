@@ -1,37 +1,5 @@
 <template>
     <div id="hj-index">
-
-        <!--section3 公司简介-->
-        <div id="section3" init="true" class="section section3">
-            <div class="wrap" style="padding-top: 10px">
-                <div class="home_title">
-                    <a href="about.html">
-                        <span class="home_title-left">公司简介/</span>
-                        <span class="home_title-right">Company Profile</span>
-                    </a>
-                </div>
-            </div>
-            <div class="company_column">
-                <div class="wrap">
-                    <div class="company_column_img">
-                        <a href="about.html" target="_blank">
-                            <img src="http://www.hejigy.com/Img/index/company.jpg"
-                                 width="600" height="350" alt="公司简介"
-                                 style="position: absolute;padding: 25px 0;width: 600px;height: 87.5%;"/>
-                        </a>
-                    </div>
-                    <div class="company_column_info">
-                        <div style="text-indent: 20px;padding-top: 80px;line-height: 28px;">
-                            <span style="color: #0067BB;">和稷(上海)工业控制系统有限公司</span>
-                            ，是一家专业代理销售国内以及国外知名品牌电气元件的集成销售商，公司通过自己现有健全的销售平台，
-                            在线上线下构建起了自己的销售网为新老客户提供了一条全新的购买途径，和自动化设备以及元件的解决方案。
-                            我司着重追求产品的性能与质量，代理众多国内外知名品牌工业产品:施耐德、欧姆龙、西门子、ABB、明纬、正泰……
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!--section4 news-->
         <div id="section4" init="false" class="section section4">
             <div class="home_news">

@@ -8,9 +8,13 @@ import msListTest1 from './list/ms-list-test-1'
 import msListGenshin from './list/ms-list-genshin'
 import hjBrand from './list/hj-brand'
 import hjIndex1 from './list/hj-index-1'
+import hjIndex3 from './list/hj-index-3'
 
 
 import msSelfIndex1 from './default/ms-self-index-1'
+import hjIndex2 from './default/hj-index-2'
+
+
 
 import msDetailGenshin from './detail/ms-detail-genshin'
 import hjHead from './head/hj-head'
@@ -35,9 +39,11 @@ Ms.install = function (Vue) {
     Vue.component(msListGenshin.name, msListGenshin)
     Vue.component(hjBrand.name, hjBrand)
     Vue.component(hjIndex1.name, hjIndex1)
+    Vue.component(hjIndex3.name, hjIndex3)
 
 
     Vue.component(msSelfIndex1.name, msSelfIndex1)
+    Vue.component(hjIndex2.name, hjIndex2)
 
 
 
