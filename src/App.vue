@@ -7,16 +7,18 @@
 
         <!--    <ms-self-footer ref="msFooter"></ms-self-footer>-->
         <!--    <ms-list-test-1></ms-list-test-1>-->
-<!--        <hj-head></hj-head>-->
-<!--        <hj-banner></hj-banner>-->
-<!--        <hj-index-1></hj-index-1>-->
-<!--        <hj-index-2></hj-index-2>-->
-<!--        <hj-index></hj-index>-->
-<!--        <hj-footer></hj-footer>-->
+        <hj-head></hj-head>
+        <hj-banner></hj-banner>
+        <hj-index-1></hj-index-1>
+        <hj-index-2></hj-index-2>
         <hj-index-3></hj-index-3>
-        <!--      <hj-banner></hj-banner>-->
+        <hj-index-4></hj-index-4>
+        <hj-index-5></hj-index-5>
+        <hj-footer></hj-footer>
 
 
+<!--        <hj-service></hj-service>-->
+<!--        <hj-about></hj-about>-->
     </div>
 </template>
 

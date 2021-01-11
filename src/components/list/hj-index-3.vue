@@ -2,18 +2,20 @@
     <div id="hj-index-3">
         <h2 id="hj-index-3-title">{{module.text[0].children[0].value}}<span>{{module.text[0].children[1].value}}</span>
         </h2>
-        <div>
+        <div id="hj-index-3-content">
             <div>
                 <div v-for="item in module.article" class="hj-index-3-item" v-bind:key="item.title">
+                    <div>
+                        <img :src="item.pic" alt="">
+                        <span>{{item.releaseTime}}</span>
+                        <h3>
+                            {{item.title}}
+                        </h3>
+                        <p>
+                            {{item.description}}
+                        </p>
+                    </div>
 
-                    <img :src="item.pic" alt="">
-                    <span>{{item.releaseTime}}</span>
-                    <h3>
-                        {{item.title}}
-                    </h3>
-                    <p>
-                        {{item.description}}
-                    </p>
 
 
                 </div>
@@ -41,11 +43,11 @@
                             children: [
                                 {
                                     label: '左侧文字',
-                                    value: '公司简介/'
+                                    value: '新闻动态/'
                                 },
                                 {
                                     label: '右侧文字',
-                                    value: 'Company Profile'
+                                    value: 'News'
                                 },
                             ]
                         }
@@ -82,31 +84,31 @@
                             description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
                         },
                         {
-                            title: '飞利浦LED植物生长灯进军俄罗斯市场',
+                            title: '飞利浦LED植物生长灯进军俄罗斯市场2',
+                            pic: 'http://www.hejigy.com/Img/index/time.png',
+                            releaseTime: '2021年1月9日 08:45:37',
+                            description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
+                        },
+                        {
+                            title: '飞利浦LED植物生长灯进军俄罗斯市场3',
+                            pic: 'http://www.hejigy.com/Img/index/time.png',
+                            releaseTime: '2021年1月9日 08:45:3',
+                            description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
+                        },
+                        {
+                            title: '飞利浦LED植物生长灯进军俄罗斯市场4',
                             pic: 'http://www.hejigy.com/Img/index/time.png',
                             releaseTime: '2021年1月9日 08:45:38',
                             description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
                         },
                         {
-                            title: '飞利浦LED植物生长灯进军俄罗斯市场',
+                            title: '飞利浦LED植物生长灯进军俄罗斯市场5',
                             pic: 'http://www.hejigy.com/Img/index/time.png',
                             releaseTime: '2021年1月9日 08:45:38',
                             description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
                         },
                         {
-                            title: '飞利浦LED植物生长灯进军俄罗斯市场',
-                            pic: 'http://www.hejigy.com/Img/index/time.png',
-                            releaseTime: '2021年1月9日 08:45:38',
-                            description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
-                        },
-                        {
-                            title: '飞利浦LED植物生长灯进军俄罗斯市场',
-                            pic: 'http://www.hejigy.com/Img/index/time.png',
-                            releaseTime: '2021年1月9日 08:45:38',
-                            description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
-                        },
-                        {
-                            title: '飞利浦LED植物生长灯进军俄罗斯市场',
+                            title: '飞利浦LED植物生长灯进军俄罗斯市场6',
                             pic: 'http://www.hejigy.com/Img/index/time.png',
                             releaseTime: '2021年1月9日 08:45:38',
                             description: '光机所在高亮度大模场光子晶体石英光纤制作方面取得进展 中国科学院上海光学精密机械研究所高功率激光单元技术研发中心石英光纤材料课题组在大模场有源光子晶体光纤的研制方面取得新进展，成功制备获得了纤芯直径大于50μm、NA小于0.03的大芯径光子晶体光纤'
@@ -117,6 +119,7 @@
         },
         mounted() {
             new elementAnimate([document.getElementById('hj-index-3-title')], 'titleTranslateNoVolume 1s forwards')
+            new elementAnimate([document.getElementById('hj-index-3-content')], 'RightFormFlyIn 2s forwards')
         }
     }
 </script>
@@ -172,30 +175,41 @@
         background-color: #fff;
         text-align: center;
         cursor: pointer;
+        display: inline-block;
         overflow: hidden;
         padding: 0 25px;
         transition: .5s;
-        position: relative;
+        /*vertical-align: middle;*/
+        /*margin-top: 30px;*/
+    }
+    .hj-index-3-item> div{
+        transition: .5s;
     }
 
-
-    .hj-index-3-item > img {
+    .hj-index-3-item> div> img {
         margin-top: 20px;
         margin-bottom: 12px;
     }
 
-    .hj-index-3-item > span {
+    .hj-index-3-item>div > span ,.hj-index-3-item>div>p{
         display: block;
+        color: #666;
         font-size: 12px;
+        line-height: 24px;
     }
-
-    .hj-index-3-item > h3 {
+    .hj-index-3-item>div>p{
+        text-align: left;
+    }
+    .hj-index-3-item>div > h3 {
         font-size: 18px;
         font-weight: normal;
     }
-
     #hj-index-3 .hj-index-3-item:hover {
         height: 160px;
+        margin: -999px 0;
+    }
+    #hj-index-3 .hj-index-3-item:hover div {
+        transform: translateY(-82px);
     }
 
     #hj-index-3 .hj-index-3-item:hover h3 {

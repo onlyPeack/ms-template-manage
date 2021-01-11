@@ -9,10 +9,14 @@ import msListGenshin from './list/ms-list-genshin'
 import hjBrand from './list/hj-brand'
 import hjIndex1 from './list/hj-index-1'
 import hjIndex3 from './list/hj-index-3'
+import hjIndex4 from './list/hj-index-4'
+import hjIndex5 from './list/hj-index-5'
+import hjService from './list/hj-service'
 
 
 import msSelfIndex1 from './default/ms-self-index-1'
 import hjIndex2 from './default/hj-index-2'
+import hjAbout from './default/hj-about'
 
 
 
@@ -40,10 +44,14 @@ Ms.install = function (Vue) {
     Vue.component(hjBrand.name, hjBrand)
     Vue.component(hjIndex1.name, hjIndex1)
     Vue.component(hjIndex3.name, hjIndex3)
+    Vue.component(hjIndex4.name, hjIndex4)
+    Vue.component(hjIndex5.name, hjIndex5)
+    Vue.component(hjService.name, hjService)
 
 
     Vue.component(msSelfIndex1.name, msSelfIndex1)
     Vue.component(hjIndex2.name, hjIndex2)
+    Vue.component(hjAbout.name, hjAbout)
 
 
 

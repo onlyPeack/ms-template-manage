@@ -37,3 +37,16 @@
     }
 }
 
+/*主体隐藏一半时间后由右侧飞入*/
+@keyframes RightFormFlyIn {
+    0%{
+        transform: translateX(100vw);
+    }
+    50%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
