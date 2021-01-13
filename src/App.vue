@@ -17,7 +17,7 @@
 <!--        <hj-footer></hj-footer>-->
 
 
-        <hj-service></hj-service>
+        <hj-news></hj-news>
 <!--        <hj-download></hj-download>-->
     </div>
 </template>

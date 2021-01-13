@@ -13,6 +13,7 @@ import hjIndex4 from './list/hj-index-4'
 import hjIndex5 from './list/hj-index-5'
 import hjService from './list/hj-service'
 import hjDownload from './list/hj-download'
+import hjNews from './list/hj-news'
 
 
 import msSelfIndex1 from './default/ms-self-index-1'
@@ -50,6 +51,7 @@ Ms.install = function (Vue) {
     Vue.component(hjIndex5.name, hjIndex5)
     Vue.component(hjService.name, hjService)
     Vue.component(hjDownload.name, hjDownload)
+    Vue.component(hjNews.name, hjNews)
 
 
     Vue.component(msSelfIndex1.name, msSelfIndex1)

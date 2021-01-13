@@ -72,6 +72,8 @@ module: {
       description:String,   描述
       releaseTime: String,  发布时间
       link:String           链接
+      publisher:String      发布人
+      pageviews:Number      浏览量
       children:[]           仅三级文章栏目存在
     },
   ]
