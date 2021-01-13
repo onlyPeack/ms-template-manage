@@ -66,11 +66,13 @@ module: {
   ],
   article: [                组件类型为列表时
     {
+      name:String           栏目名(仅三级栏目)
       title:String ,        标题
       pic:String,           图片
       description:String,   描述
       releaseTime: String,  发布时间
       link:String           链接
+      children:[]           仅三级文章栏目存在
     },
   ]
   info:[String,String]      模板对外公开信息

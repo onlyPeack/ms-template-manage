@@ -82,7 +82,7 @@
                         {
                             label:'右侧文字颜色',
                             name:'--rightColor',
-                            value:'rgba(149,208,255,1)',
+                            value:'rgb(149,208,255)',
                             property:'color'
                         },
                         {
