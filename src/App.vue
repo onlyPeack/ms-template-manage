@@ -17,7 +17,7 @@
 <!--        <hj-footer></hj-footer>-->
 
 
-        <hj-news></hj-news>
+        <hj-join-us></hj-join-us>
 <!--        <hj-download></hj-download>-->
     </div>
 </template>

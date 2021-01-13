@@ -1,14 +1,6 @@
 <template>
     <div id="hj-download">
-        <div class="inside_banner_download">
-            <div class="wrap posr">
-                <!--<div class="news_seek">
-                  <input type="text" id="k" name="k" value="" class="text" />
-                  <img src="Picture/btn_search.png"
-                  alt="和稷资讯搜索" onClick="search_news()" width="16" height="16" />
-                </div>-->
-            </div>
-        </div>
+        <ms-img :img-url="module.style[0].value"></ms-img>
         <div class="download_tab">
             <font>下载中心/ </font><font>download center</font>
         </div>
@@ -42,7 +34,13 @@
                     name:'和稷下载',
                     classId:'hj-download',
                     type:'list',
-
+                    style: [
+                        {
+                            label: '顶部图片',
+                            value: 'http://www.hejigy.com/Img/download/banner.jpg',
+                            property:'img'
+                        }
+                    ],
                 }
             }
         }
@@ -50,7 +48,6 @@
 </script>
 
 <style scoped>
-    .inside_banner_download{background: url("http://www.hejigy.com/Img/download/banner.jpg") no-repeat center;height: 400px;}
     /*下载中心*/
     .download_tab{
         text-align: center;

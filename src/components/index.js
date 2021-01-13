@@ -14,12 +14,14 @@ import hjIndex5 from './list/hj-index-5'
 import hjService from './list/hj-service'
 import hjDownload from './list/hj-download'
 import hjNews from './list/hj-news'
+import hjJoinUs from './list/hj-join-us'
 
 
 import msSelfIndex1 from './default/ms-self-index-1'
 import hjIndex2 from './default/hj-index-2'
 import hjAbout from './default/hj-about'
 import hjConnect from './default/hj-connect'
+import msImg from './default/ms-img'
 
 
 
@@ -52,12 +54,14 @@ Ms.install = function (Vue) {
     Vue.component(hjService.name, hjService)
     Vue.component(hjDownload.name, hjDownload)
     Vue.component(hjNews.name, hjNews)
+    Vue.component(hjJoinUs.name, hjJoinUs)
 
 
     Vue.component(msSelfIndex1.name, msSelfIndex1)
     Vue.component(hjIndex2.name, hjIndex2)
     Vue.component(hjAbout.name, hjAbout)
     Vue.component(hjConnect.name, hjConnect)
+    Vue.component(msImg.name, msImg)
 
 
 

@@ -38,10 +38,11 @@ module: {
     {
       label: String,
       name: css-var-name,   css自定义变量名
+      css:cssName           css属性名(仅select时需要)
       value: String,        css属性值
       index: 0,             在Style中的索引(暂废弃)
-      type: style/default,  属性类型(样式,图片)
-      property:color/img    样式类型(颜色,图片)
+      type: style/default,  属性类型(样式,默认)
+      property:color/img/select    样式类型(颜色,图片)
     }
   ],
   text: [                   组件公开文案
