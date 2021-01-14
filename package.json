@@ -2,7 +2,7 @@
   "name": "ms-template-manage",
   "version": "0.3.1",
   "private": false,
-  "main": "examples/components/index.js",
+  "main": "lib/ms-template-manage.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
