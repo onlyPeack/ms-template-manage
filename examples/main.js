@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 import './assets/css/ms-animation.css'
 // import './assets/css/reset.css'
-import msTemplateManage from './components/index'
+import msTemplateManage from '../packages/index'
 
 
 Vue.config.productionTip = false
@@ -15,6 +15,8 @@ Vue.use(ElementUI)
 Vue.use(VueRouter)
 
 Vue.use(msTemplateManage)
+
+
 new Vue({
   render: h => h(App),
   router

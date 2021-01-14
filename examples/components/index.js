@@ -26,13 +26,19 @@ import msImg from './default/ms-img'
 
 
 import msDetailGenshin from './detail/ms-detail-genshin'
+import hjNewsDetail from './detail/hj-news-detail'
+
+
+
+
+
 import hjHead from './head/hj-head'
 import hjFooter from './footer/hj-footer'
 import hjIndex from './page/hj-index'
 
 
 
-import mixins from '../mixins/default'
+import mixins from '../../src/mixins/default'
 
 let Ms = {}
 Ms.install = function (Vue) {
@@ -66,6 +72,9 @@ Ms.install = function (Vue) {
 
 
     Vue.component(msDetailGenshin.name, msDetailGenshin)
+    Vue.component(hjNewsDetail.name, hjNewsDetail)
+
+
     Vue.component(hjHead.name, hjHead)
     Vue.component(hjFooter.name, hjFooter)
     Vue.component(hjIndex.name, hjIndex)

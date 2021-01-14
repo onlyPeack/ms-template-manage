@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-genshin">
+  <div id="detail-genshin">
     <div class="detail-genshin-body">
       <h3>{{module.detail.title}}</h3>
       <h4>{{module.detail.releaseTime}}</h4>
@@ -27,6 +27,7 @@
       return {
         module: {
           name: 'genshin新闻详情',
+          classId:'detail-genshin',
           detail:{
             title:'这是文章标题',
             releaseTime:'这是文章发布时间',
@@ -39,7 +40,7 @@
 </script>
 
 <style scoped>
-  .detail-genshin {
+  #detail-genshin {
     min-height: 100vh;
     background-image: url('http://gxcl-shop.qiniu.520mro.com/wmjyadys6k0k9rtzz8i2.jpg');
     display: flex;

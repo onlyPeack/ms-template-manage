@@ -59,12 +59,12 @@
           style:[
             {
               label:'行高：',
-              name:'--item-height',
+              name:'--itemHeight',
               value:'140px'
             },
             {
               label:'背景色：',
-              name:'--item-bg-color',
+              name:'--itemBgColor',
               value:'#ffffff',
               property:'color'
             },
@@ -82,11 +82,11 @@
 </script>
 
 <style scoped>
-  .list-genshin {
+  #list-genshin{
     --itemHeight:'';
     --itemBgColor:'';
-
-
+  }
+  .list-genshin {
     background-color: rgb(240, 240, 240);
     min-height: 400px;
     padding-top: 50px;

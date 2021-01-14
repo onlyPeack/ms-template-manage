@@ -77,7 +77,18 @@ module: {
       pageviews:Number      浏览量
       children:[]           仅三级文章栏目存在
     },
-  ]
+  ],
+  detail:{                  详情(仅为详情页时使用)
+    title:String,
+    releaseTime:String,
+    content:String,         文章内容  
+    before:{                上一篇文章数据
+        id:String
+        name:String
+    },
+    after:{}                下一篇文章数据     
+  }
+
   info:[String,String]      模板对外公开信息
 },
 

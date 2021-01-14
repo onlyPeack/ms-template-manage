@@ -17,7 +17,7 @@
                     <img src="http://www.hejigy.com/Img/download/group.jpg"
                          width="35" height="35"/>
                     <a>和稷--ERP (64位）</a>
-                    <a class="download_btn" href="http://www.hejigy.com/DownloadPath//和稷ERP客户端-64位.exe">立即下载</a>
+                    <a class="download_btn" href="http://www.hejigy.com/DownloadPath/和稷ERP客户端-64位.exe">立即下载</a>
 
                 </li>
             </ul>

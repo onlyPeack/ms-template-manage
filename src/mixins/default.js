@@ -1,4 +1,4 @@
-// import '../assets/css/ms-template-manage.css'
+
 export default {
   data(){
     return{
@@ -10,9 +10,6 @@ export default {
     }
   },
   created(){
-    //let a=require('../assets/css/ms-template-manage.css')
-    //require('../assets/css/ms-template-manage.css')
-    //console.log('混入了CSS')
     this.isMobile=this.client().width<768
   },
   computed:{
@@ -52,13 +49,17 @@ export default {
     },
 
     setStyle(styleArr){
-      //console.log(this.module,'module')
       let root=document.getElementById(this.module.classId)
       for (let i = 0; i <styleArr.length ; i++) {
         if(styleArr[i].name&&styleArr[i].name!==''){
           root.style.setProperty(styleArr[i].name,styleArr[i].value)
         }
       }
+    },
+    linkClick(link){
+      this.$router.push({
+        path:link
+      })
     }
   },
   mounted(){

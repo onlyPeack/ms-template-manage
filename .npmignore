@@ -1,6 +1,11 @@
-__tests__
+.DS_Store
+/node_modules
+/examples
+/packages
 /coverage
 /public
+vue.config.js
+babel.config.js
 
 # Editor directories and files
 .idea

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <!--    <ms-self-head ref="msHead"></ms-self-head>-->
-        <!--    <ms-list-genshin></ms-list-genshin>-->
+            <hj-head></hj-head>
         <!--&lt;!&ndash;    <el-button type="primary" style="margin-top: 120px;" @click="test">777</el-button>&ndash;&gt;-->
         <!--    <router-view/>-->
 
@@ -14,10 +14,10 @@
 <!--        <hj-index-3></hj-index-3>-->
 <!--        <hj-index-4></hj-index-4>-->
 <!--        <hj-index-5></hj-index-5>-->
-<!--        <hj-footer></hj-footer>-->
+        <hj-footer></hj-footer>
 
 
-        <hj-join-us></hj-join-us>
+<!--        <hj-news-detail></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
     </div>
 </template>
@@ -42,11 +42,11 @@
 
 <style>
     #app {
-        font-family: Avenir, Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        color: #2c3e50;
-        position: relative;
-        min-height: 400px;
+        /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
+        /*-webkit-font-smoothing: antialiased;*/
+        /*-moz-osx-font-smoothing: grayscale;*/
+        /*color: #2c3e50;*/
+        /*position: relative;*/
+        /*min-height: 400px;*/
     }
 </style>
