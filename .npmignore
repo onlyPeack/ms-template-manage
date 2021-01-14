@@ -4,6 +4,7 @@ examples/
 packages/
 coverage/
 public/
+build/
 vue.config.js
 babel.config.js
 

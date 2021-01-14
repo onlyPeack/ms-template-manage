@@ -2,6 +2,10 @@
 import hjHead from './src/hj-head'
 import mixins from "../../src/mixins/default";
 
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.component('hj-head', hjHead)
+}
+
 // 为组件提供 install 安装方法，供按需引入
 hjHead.install = function (Vue) {
     Vue.mixin(mixins)

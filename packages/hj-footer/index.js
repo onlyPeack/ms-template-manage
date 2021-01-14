@@ -2,6 +2,10 @@
 import hjFooter from './src/hj-footer'
 import mixins from "../../src/mixins/default";
 
+if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.component('hj-footer', hjFooter)
+}
+
 // 为组件提供 install 安装方法，供按需引入
 hjFooter.install = function (Vue) {
     Vue.mixin(mixins)
