@@ -7,6 +7,9 @@ public/
 build/
 vue.config.js
 babel.config.js
+.babelrc
+
+
 
 # Editor directories and files
 .idea
