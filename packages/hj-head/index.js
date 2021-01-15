@@ -1,7 +1,9 @@
 // 导入组件，组件必须声明 name
 import hjHead from './src/hj-head'
+import mixins from "../../src/mixins/default";
 
 if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.mixin(mixins)
     window.Vue.component('hj-head', hjHead)
 }
 

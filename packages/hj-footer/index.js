@@ -1,7 +1,8 @@
 // 导入组件，组件必须声明 name
 import hjFooter from './src/hj-footer'
-
+import mixins from "../../src/mixins/default";
 if (typeof window !== 'undefined' && window.Vue) {
+    window.Vue.mixin(mixins)
     window.Vue.component('hj-footer', hjFooter)
 }
 
