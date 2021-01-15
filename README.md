@@ -15,11 +15,22 @@ import 'ms-template-manage/lib/ms-template-manage.css'
 import 'ms-template-manage/src/assets/css/ms-animation.css'
 ```
 
-### Use
+### Use ALL
 ```
 import ms-template-manage form 'ms-template-manage'
 Vue.use(ms-template-manage)
 ```
+
+### Use section 
+need babel-plugin-component support
+```
+import {ms-template-manage1,ms-template-manage2} form 'ms-template-manage'
+Vue.use(ms-template-manage1)
+Vue.use(ms-template-manage12)
+```
+
+
+
 
 ### Components import address
 ```

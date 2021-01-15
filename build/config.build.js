@@ -22,6 +22,7 @@ module.exports = {
         }
     },
     chainWebpack: config => {
+        config.resolve.symlinks(true)
         config.optimization.delete('splitChunks')
         config.plugins.delete('copy')
         config.plugins.delete('preload')

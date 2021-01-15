@@ -12,5 +12,12 @@
 const devConfig = require('./build/config.dev')
 const buildConfig = require('./build/config.build')
 
-module.exports = process.env.NODE_ENV === 'development' ? devConfig : buildConfig
-// module.exports = process.env.NODE_ENV === 'development' ? devConfig : buildConfig
+
+//为npm提供资源包时 使用build命令
+// module.exports =  buildConfig
+
+
+//为HTML文件提供资源包时 使用lib命令
+//项目启动时使用此行
+module.exports =devConfig
+

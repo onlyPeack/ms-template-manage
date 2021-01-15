@@ -4,7 +4,7 @@ import mixins from "../../src/mixins/default";
 
 if (typeof window !== 'undefined' && window.Vue) {
     window.Vue.mixin(mixins)
-    window.Vue.component('hj-head', hjHead)
+    window.Vue.component(hjHead.name, hjHead)
 }
 
 // 为组件提供 install 安装方法，供按需引入
