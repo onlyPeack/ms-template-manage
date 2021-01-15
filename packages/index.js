@@ -1,6 +1,7 @@
 // 导入颜色选择器组件
 import hjHead from './hj-head'
 import hjFooter from './hj-footer'
+import mixins from "../src/mixins/default";
 
 // 存储组件列表
 const components = [
@@ -13,6 +14,7 @@ const install = function (Vue) {
     // 判断是否安装
     if (install.installed) return
     // 遍历注册全局组件
+    Vue.mixin(mixins)
     components.map(component => Vue.component(component.name, component))
 }
 

@@ -7,7 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import 'element-ui/lib/theme-chalk/display.css';
 import './assets/css/ms-animation.css'
 // import './assets/css/reset.css'
-import msTemplateManage from '../packages/index'
+import msTemplateManage from '../lib/index/index'
 
 
 Vue.config.productionTip = false
