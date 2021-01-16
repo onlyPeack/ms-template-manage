@@ -57,9 +57,10 @@ export default {
       }
     },
     linkClick(link){
-      this.$router.push({
-        path:link
-      })
+      if(link&&link!==''){
+        this.$emit('linkClick')
+      }
+
     }
   },
   mounted(){

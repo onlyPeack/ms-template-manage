@@ -26,7 +26,7 @@ need babel-plugin-component support
 ```
 import {ms-template-manage1,ms-template-manage2} form 'ms-template-manage'
 Vue.use(ms-template-manage1)
-Vue.use(ms-template-manage12)
+Vue.use(ms-template-manage2)
 ```
 
 
@@ -37,7 +37,12 @@ Vue.use(ms-template-manage12)
 ms-template-manage/src/components
 ```
 
-### 预设内容结构
+每个组件都有getModule和setModule两个对外公开方法,直接获取组件元素后调用即可,用于设置和获取module,
+修改module中的值后setModule将直接引起view的变化
+
+
+
+### 预设模板数据结构
 
 ```
 module: {
@@ -89,14 +94,15 @@ module: {
       children:[]           仅三级文章栏目存在
     },
   ],
-  detail:{                  详情(仅为详情页时使用)
-    title:String,
-    releaseTime:String,
-    content:String,         文章内容  
+  detail:{                  详情(仅为详情页时使用) 
     before:{                上一篇文章数据
         id:String
         name:String
+        title:String,
+        releaseTime:String,
+        content:String, 
     },
+    mid:{}                  当前文章数据
     after:{}                下一篇文章数据     
   }
 

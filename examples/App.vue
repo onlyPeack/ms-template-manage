@@ -27,8 +27,13 @@
             // msSelfHead: () => import(`./components/ms-self-head`),
             // msSelfFooter: () => import(`./components/ms-self-footer`),
         },
+        watch:{
+          '$route':function (val,oldValue) {
+              console.log(val,oldValue,'路由发生变化')
+          }
+        },
         created() {
-
+            console.log(this.$router,this.$route,'路由信息',this)
         },
         mounted() {
             //console.log(this.$refs['msFooter'].getModule(),'test')
