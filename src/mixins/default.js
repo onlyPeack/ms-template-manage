@@ -56,9 +56,10 @@ export default {
         }
       }
     },
-    linkClick(link){
-      if(link&&link!==''){
-        this.$emit('linkClick')
+    linkClick(params,flag){
+      if(params&&params!==''){
+        params=flag+'='+params
+        this.$emit('linkClick',params)
       }
 
     }

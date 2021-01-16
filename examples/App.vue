@@ -23,15 +23,6 @@
 
     export default {
         name: 'App',
-        components: {
-            // msSelfHead: () => import(`./components/ms-self-head`),
-            // msSelfFooter: () => import(`./components/ms-self-footer`),
-        },
-        watch:{
-          '$route':function (val,oldValue) {
-              console.log(val,oldValue,'路由发生变化')
-          }
-        },
         created() {
             console.log(this.$router,this.$route,'路由信息',this)
         },
@@ -39,8 +30,8 @@
             //console.log(this.$refs['msFooter'].getModule(),'test')
         },
         methods: {
-            testMethod(){
-                console.log('方法传递成功!')
+            testMethod(params){
+                console.log('方法传递成功!',params)
             }
         }
     }

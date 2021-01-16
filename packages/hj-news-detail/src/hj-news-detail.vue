@@ -8,8 +8,8 @@
         <div v-html="module.detail.mid.content" class="content"></div>
         <div class="footer-divider"></div>
         <div class="footer-content">
-            <span @click="linkClick(module.detail.before.id)">上一篇：{{module.detail.before.name||'没有了'}}</span>
-            <span @click="linkClick(module.detail.after.id)" style="float: right">下一篇：{{module.detail.after.name||'没有了'}}</span>
+            <span @click="linkClick(module.detail.before.id,'article')">上一篇：{{module.detail.before.name||'没有了'}}</span>
+            <span @click="linkClick(module.detail.after.id,'article')" style="float: right">下一篇：{{module.detail.after.name||'没有了'}}</span>
         </div>
 
     </div>
