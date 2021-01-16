@@ -23,7 +23,7 @@
                         <span class="year">{{changeForDate(item.releaseTime).getFullYear()}}.{{changeForDate(item.releaseTime).getMonth()+1}}</span>
                         <span class="author">{{item.publisher}}</span>
                     </div>
-                    <div class="news_cont fr">
+                    <div class="news_cont fr" @click="linkClick(item.id,'article')">
                         <h2>
                             <a :href="item.link">
                                 {{item.title}}
