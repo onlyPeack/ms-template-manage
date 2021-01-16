@@ -58,8 +58,7 @@ export default {
     },
     linkClick(params,flag){
       if(params&&params!==''){
-        params=flag+'='+params
-        this.$emit('linkClick',params)
+        this.$emit('linkClick',flag,params)
       }
 
     }
