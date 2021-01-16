@@ -14,7 +14,7 @@
 <!--        <hj-index-4></hj-index-4>-->
 <!--        <hj-index-5></hj-index-5>-->
 <!--        <hj-footer></hj-footer>-->
-        <hj-news-detail></hj-news-detail>
+        <hj-news-detail @linkClick="testMethod"></hj-news-detail>
 <!--        <hj-download></hj-download>-->
     </div>
 </template>
@@ -38,7 +38,11 @@
         mounted() {
             //console.log(this.$refs['msFooter'].getModule(),'test')
         },
-        methods: {}
+        methods: {
+            testMethod(){
+                console.log('方法传递成功!')
+            }
+        }
     }
 </script>
 
