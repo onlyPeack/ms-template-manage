@@ -1,11 +1,8 @@
-
+import {ModuleFormat} from '../assets/js/moduleFormat'
 export default {
   data(){
     return{
-      module:{
-        classId:'',
-        style:[]
-      },
+      module:new ModuleFormat().module,
       isMobile:false
     }
   },
@@ -15,7 +12,7 @@ export default {
   computed:{
     articleList:function(){
       if(this.module.type==='list'){
-        return this.module.article.slice(0,this.module.limit||0)
+        return this.module.article.slice(0,this.module.limit)
       }
     }
   },

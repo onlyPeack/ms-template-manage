@@ -42,7 +42,7 @@
             }
         },
         created() {
-            console.log(this.$router,'router')
+            console.log(this.module,'module')
         }
     }
 </script>
