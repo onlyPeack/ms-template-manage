@@ -14,8 +14,9 @@
 <!--        <hj-index-4></hj-index-4>-->
 <!--        <hj-index-5></hj-index-5>-->
 <!--        <hj-footer></hj-footer>-->
-        <hj-news-detail @linkClick="testMethod"></hj-news-detail>
+<!--        <hj-news-detail @linkClick="testMethod"></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
+        <hj-connect></hj-connect>
     </div>
 </template>
 

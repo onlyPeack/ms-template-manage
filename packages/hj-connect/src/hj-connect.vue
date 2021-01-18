@@ -11,23 +11,23 @@
                         <ul>
                             <li>
                                 <img src="http://www.hejigy.com/Img/contact/1.png" alt="">
-                                地址：上海市嘉定区江桥镇金园六路319号B栋
+                                地址：{{module.text[0].children[2].value}}
                             </li>
                             <li>
                                 <img src="http://www.hejigy.com/Img/contact/2.png" alt="">
-                                邮编：201800
+                                邮编：{{module.text[0].children[3].value}}
                             </li>
                             <li>
                                 <img src="http://www.hejigy.com/Img/contact/3.png" alt="">
-                                电话：021-69974155
+                                电话：{{module.text[0].children[4].value}}
                             </li>
                             <li>
                                 <img src="http://www.hejigy.com/Img/contact/4.png" alt="">
-                                邮箱： 417022660@qq.com
+                                邮箱： {{module.text[0].children[5].value}}
                             </li>
                             <li>
                                 <img src="http://www.hejigy.com/Img/contact/5.png" alt="">
-                                相关链接：和稷在线 <a href="http://www.hejizx.com/" target="_blank">www.hejizx.com</a>
+                                相关链接：{{module.text[0].children[6].value}} <a :href="`http://${module.text[0].children[6].link}`" target="_blank">{{module.text[0].children[6].link}}</a>
                             </li>
                         </ul>
                     </div>
@@ -55,12 +55,33 @@
                             type: 'default',
                             children: [
                                 {
-                                    label: '左侧文字',
+                                    label: '左侧文字：',
                                     value: '联系方式/'
                                 },
                                 {
-                                    label: '右侧文字',
+                                    label: '右侧文字：',
                                     value: 'Contact  information'
+                                },
+                                {
+                                    label: '地址：',
+                                    value: '上海市嘉定区江桥镇金园六路319号B栋'
+                                },
+                                {
+                                    label: '邮编：',
+                                    value: '201800'
+                                },
+                                {
+                                    label: '电话：',
+                                    value: '021-69974155'
+                                },
+                                {
+                                    label: '邮箱：',
+                                    value: '417022660@qq.com'
+                                },
+                                {
+                                    label: '相关链接名：',
+                                    value: '和稷在线',
+                                    link:'www.hejizx.com'
                                 },
                             ]
                         }
