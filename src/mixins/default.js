@@ -21,7 +21,7 @@ export default {
       return this.module
     },
     setModule(module) {
-      this.module = Object.assign(this.module,module)
+      this.module = this.deepObjectMerge(this.module,module)
       if(this.module.style.length>0){
         this.setStyle(this.module.style)
       }
@@ -58,6 +58,14 @@ export default {
         this.$emit('linkClick',flag,params)
       }
 
+    },
+
+    deepObjectMerge(FirstOBJ, SecondOBJ) { // 深度合并对象
+      for (let key in SecondOBJ) {
+        FirstOBJ[key] = FirstOBJ[key] && FirstOBJ[key].toString() === "[object Object]" ?
+            this.deepObjectMerge(FirstOBJ[key], SecondOBJ[key]) : FirstOBJ[key] = SecondOBJ[key];
+      }
+      return FirstOBJ;
     }
   },
   mounted(){

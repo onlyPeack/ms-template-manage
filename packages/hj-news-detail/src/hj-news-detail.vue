@@ -42,7 +42,14 @@
             }
         },
         created() {
-            console.log(this.module,'module')
+            // console.log(this.module,'module')
+            // this.setModule({
+            //     detail: {
+            //         mid:{},
+            //         before: {}
+            //     }
+            // })
+            // console.log(this.module,'before')
         }
     }
 </script>
