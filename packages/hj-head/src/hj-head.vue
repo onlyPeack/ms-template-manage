@@ -4,7 +4,7 @@
             <div style="display: inline-block;min-width: 135px;">
                 <h1 class="fl">
                     <a href="#" class="fl logo">
-                        <img src="http://www.hejigy.com/Img/index/logo.png"
+                        <img :src="module.style[1].value"
                              alt="TI Alliance" width="135" height="43"/>
                     </a>
                 </h1>
@@ -45,7 +45,14 @@
                             label:'列表点击后颜色',
                             value:'rgb(23, 114, 189)',
                             property:'color'
-                        }
+                        },
+                        {
+                            label: 'logo',
+                            value: 'http://www.hejigy.com/Img/index/logo.png',
+                            index: 2,
+                            type: 'default',
+                            property:'img'
+                        },
                     ],
                     text: [
                         {

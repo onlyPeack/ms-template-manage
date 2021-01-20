@@ -6,7 +6,7 @@
 
         <!--    <ms-self-footer ref="msFooter"></ms-self-footer>-->
         <!--    <ms-list-test-1></ms-list-test-1>-->
-<!--        <hj-head></hj-head>-->
+        <hj-head></hj-head>
 <!--        <hj-banner></hj-banner>-->
 <!--        <hj-index-1></hj-index-1>-->
 <!--        <hj-index-2></hj-index-2>-->
@@ -16,7 +16,7 @@
 <!--        <hj-footer></hj-footer>-->
 <!--        <hj-news-detail @linkClick="testMethod"></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
-        <hj-connect></hj-connect>
+<!--        <hj-connect></hj-connect>-->
     </div>
 </template>
 
