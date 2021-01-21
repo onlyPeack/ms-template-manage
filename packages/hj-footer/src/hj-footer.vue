@@ -38,10 +38,10 @@
 
         </div>
         <div class="copyright">
-            <div>
-                © 2010-2018 和稷(上海)工业控制系统有限公司 All Rights Reserved
+            <div v-if="module.text[0].children[6].value*1!==0">
+                {{module.text[0].children[6].value}}
             </div>
-            <div>经营许可证编号：沪ICP备16009044号-1</div>
+            <div v-if="module.text[0].children[7].value*1!==0">{{module.text[0].children[7].value}}</div>
         </div>
     </footer>
 </template>
@@ -76,6 +76,12 @@
                                 },{
                                     label: '公众号2：',
                                     value:'和稷工业公众号'
+                                },{
+                                    label: '版权信息1：',
+                                    value:'© 2010-2018 和稷(上海)工业控制系统有限公司 All Rights Reserved'
+                                },{
+                                    label: '版权信息2：',
+                                    value:'经营许可证编号：沪ICP备16009044号-1'
                                 },
                             ]
                         }
@@ -102,7 +108,7 @@
                             description:'http://cloud.msebc.com/#/'
                         },
                     ],
-                    info:['字段内容设置为0时此字段隐藏','相关链接关联文章栏目,文章标题：链接名,文章描述：链接地址(完整地址)']
+                    info:['字段内容设置为0时此字段隐藏','相关链接关联文章二级栏目,文章标题：链接名,文章描述：链接地址(完整地址)']
                 }
             }
         }
