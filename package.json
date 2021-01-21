@@ -1,6 +1,6 @@
 {
   "name": "ms-template-manage",
-  "version": "0.3.17",
+  "version": "0.3.18",
   "private": false,
   "main": "lib/index/index.js",
   "scripts": {
