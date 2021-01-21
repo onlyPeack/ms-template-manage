@@ -1,7 +1,5 @@
 <template>
     <div id="hj-brand">
-        <!--banner-->
-        <div class="inside_banner_brand"></div>
         <!--品牌筛选-->
         <div class="brand-nav">
             <ul>

@@ -1,8 +1,5 @@
 <template>
     <div id="hj-connect">
-        <div class="inside_banner_contactus">
-
-        </div>
         <div class="connect">
             <div class="wrap">
                 <h2 id="hj-connect-title">{{module.text[0].children[0].value}}<span>{{module.text[0].children[1].value}}</span></h2>

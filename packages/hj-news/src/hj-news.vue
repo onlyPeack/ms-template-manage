@@ -1,14 +1,5 @@
 <template>
     <div id="hj-news">
-        <div class="inside_banner_news">
-            <div class="wrap posr">
-                <!--<div class="news_seek">
-                  <input type="text" id="k" name="k" value="" class="text" />
-                  <img src="Picture/btn_search.png"
-                  alt="和稷资讯搜索" onClick="search_news()" width="16" height="16" />
-                </div>-->
-            </div>
-        </div>
         <div class="hj-news-content">
             <div class="news_tab">
                 <div v-for="(item,index) in module.article" v-bind:key="item.name"

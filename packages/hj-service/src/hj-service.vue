@@ -1,6 +1,5 @@
 <template>
     <div id="hj-service">
-        <div class="hj-service-banner"></div>
         <h2 id="hj-service-title">{{module.text[0].children[0].value}}<span>{{module.text[0].children[1].value}}</span>
         </h2>
         <div class="hj-service-content">

@@ -40,12 +40,35 @@
                             property: 'color',
                             type:'style'
                         },
+                        {
+                            label: '轮播整体高度',
+                            name:'--boxHeight',
+                            value: '540px',
+                            type:'style'
+                        }
                     ],
                     info: [
-                        '图片:网页缩略图'
+                        '图片:网页缩略图',
+                        '轮播整体高度设置为1时为一整屏高度'
                     ]
                 }
             }
+        },
+        methods:{
+            setStyle(styleArr){
+                let root=document.getElementById(this.module.classId)
+                for (let i = 0; i <styleArr.length ; i++) {
+                    if(styleArr[i].name&&styleArr[i].name!==''){
+                        if(styleArr[i].value*1===1){
+                            let h = document.documentElement.clientHeight || document.body.clientHeight;
+                            root.style.setProperty(styleArr[i].name,h+'px')
+                        }else{
+                            root.style.setProperty(styleArr[i].name,styleArr[i].value)
+                        }
+
+                    }
+                }
+            },
         }
     }
 </script>
@@ -54,9 +77,9 @@
     #hj-banner {
         --activeColor: '';
         --defaultColor: '';
+        --boxHeight:'';
 
-
-        height: 560px;
+        height: var(--boxHeight);
     }
 
     #hj-banner .banner-item {
@@ -75,5 +98,10 @@
 
     #hj-banner .el-carousel__indicator.is-active button {
         background-color: var(--activeColor);
+    }
+    #hj-banner .banner-item{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 </style>

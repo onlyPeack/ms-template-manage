@@ -1,6 +1,5 @@
 <template>
     <div id="hj-download">
-        <ms-img :img-url="module.style[0].value"></ms-img>
         <div class="download_tab">
             <font>下载中心/ </font><font>download center</font>
         </div>

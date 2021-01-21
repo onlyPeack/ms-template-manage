@@ -1,6 +1,5 @@
 <template>
     <div id="hj-join-us">
-        <ms-img :img-url="module.style[0].value"></ms-img>
         <div class="jion">
             <div class="wrap posr" style="height: 100%;">
                 <div class="about_title">

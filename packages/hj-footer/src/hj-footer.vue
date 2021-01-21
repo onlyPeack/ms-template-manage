@@ -5,32 +5,34 @@
 
             <div class="left-one">
                 <ul>
-                    <li>地址：上海市嘉定区江桥镇金园六路319号B栋</li>
-                    <li>邮编：201800</li>
-                    <li>电话：021-69974155</li>
+                    <li v-if="module.text[0].children[0].value*1!==0">地址：{{module.text[0].children[0].value}}</li>
+                    <li v-if="module.text[0].children[1].value*1!==0">邮编：{{module.text[0].children[1].value}}</li>
+                    <li v-if="module.text[0].children[2].value*1!==0">电话：{{module.text[0].children[2].value}}</li>
                 </ul>
             </div>
 
             <div class="left-two">
                 <ul>
-                    <li>邮箱： 417022660@qq.com</li>
-                    <li>相关链接：工享创联 <a href="https://www.520mro.com" target="_blank">www.520mro.com</a></li>
+                    <li v-if="module.text[0].children[3].value*1!==0">邮箱：{{module.text[0].children[3].value}}</li>
+                    <li>相关链接：
+                        <el-link v-for="item in module.article" v-bind:key="item.title" :href="item.description" target="_blank" style="vertical-align: baseline;margin-right: 15px;">{{item.title}}</el-link>
+                    </li>
                 </ul>
             </div>
 
-            <div class="right-one">
-                <img src="http://www.hejigy.com/Img/index/gxcl.jpg"
-                     width="98" height="98" alt="工享创联公众号"/>
+            <div class="right-one" v-if="module.text[0].children[4].value*1!==0">
+                <img :src="module.style[0].value"
+                     width="98" height="98" :alt="module.text[0].children[4].value"/>
                 <ul>
-                    <li>工享创联公众号</li>
+                    <li>{{module.text[0].children[4].value}}</li>
                 </ul>
             </div>
 
-            <div class="right-two">
-                <img src="http://www.hejigy.com/Img/index/hjgy.png"
-                     width="98" height="98" alt="和稷工业公众号"/>
+            <div class="right-two" v-if="module.text[0].children[5].value*1!==0">
+                <img :src="module.style[1].value"
+                     width="98" height="98" :alt="module.text[0].children[5].value"/>
                 <ul>
-                    <li>和稷工业公众号</li>
+                    <li>{{module.text[0].children[5].value}}</li>
                 </ul>
             </div>
 
@@ -51,7 +53,56 @@
             return{
                 module:{
                     name:'和稷尾部',
-                    id:'hj-footer'
+                    classId:'hj-footer',
+                    text:[
+                        {
+                            label:'企业信息文字组：',
+                            children:[
+                                {
+                                    label: '地址：',
+                                    value:'上海市嘉定区江桥镇金园六路319号B栋'
+                                },{
+                                    label: '邮编：',
+                                    value:'201800'
+                                },{
+                                    label: '电话：',
+                                    value:'021-69974155'
+                                },{
+                                    label: '邮箱：',
+                                    value:'417022660@qq.com'
+                                },{
+                                    label: '公众号1：',
+                                    value:'工享创联公众号'
+                                },{
+                                    label: '公众号2：',
+                                    value:'和稷工业公众号'
+                                },
+                            ]
+                        }
+                    ],
+                    style:[
+                        {
+                            label: '公众号1',
+                            value: 'http://www.hejigy.com/Img/index/gxcl.jpg',
+                            type: 'default',
+                            property:'img'
+                        },{
+                            label: '公众号2',
+                            value: 'http://www.hejigy.com/Img/index/hjgy.png',
+                            type: 'default',
+                            property:'img'
+                        },
+                    ],
+                    article:[
+                        {
+                            title:'工享创联',
+                            description:'http://www.520mro.com'
+                        },{
+                            title:'梅施云',
+                            description:'http://cloud.msebc.com/#/'
+                        },
+                    ],
+                    info:['字段内容设置为0时此字段隐藏','相关链接关联文章栏目,文章标题：链接名,文章描述：链接地址(完整地址)']
                 }
             }
         }

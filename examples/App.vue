@@ -6,7 +6,7 @@
 
         <!--    <ms-self-footer ref="msFooter"></ms-self-footer>-->
         <!--    <ms-list-test-1></ms-list-test-1>-->
-        <hj-head></hj-head>
+<!--        <hj-head></hj-head>-->
 <!--        <hj-banner></hj-banner>-->
 <!--        <hj-index-1></hj-index-1>-->
 <!--        <hj-index-2></hj-index-2>-->
@@ -16,7 +16,12 @@
 <!--        <hj-footer></hj-footer>-->
 <!--        <hj-news-detail @linkClick="testMethod"></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
+<!--        <hj-service></hj-service>-->
 <!--        <hj-connect></hj-connect>-->
+<!--        <hj-brand></hj-brand>-->
+<!--        <ms-self-scroll></ms-self-scroll>-->
+<!--        <hj-news></hj-news>-->
+        <hj-join-us></hj-join-us>
     </div>
 </template>
 

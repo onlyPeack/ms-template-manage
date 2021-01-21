@@ -1,22 +1,20 @@
 <template>
-  <header v-if="!isMobile">
+  <header>
     <el-carousel :arrow="arrow">
-      <el-carousel-item v-for="(item,index) in module.text" :key="index" :style="`background-image:url(${module.style[index].value})`">
-        <hgroup>
-          <h2 v-for="textItem in item.children" :key="textItem.label">{{ textItem.label }}</h2>
-        </hgroup>
+      <el-carousel-item v-for="(item,index) in module.article" :key="index" :style="`background-image:url(${item.pic})`" >
+        <div v-html="item.content"></div>
       </el-carousel-item>
     </el-carousel>
   </header>
-  <header v-else>
-    <el-carousel :arrow="arrow">
-      <el-carousel-item v-for="(item,index) in module.mobileText" :key="index" :style="`background-image:url(${module.style[index].value})`">
-        <hgroup>
-          <h2 v-for="textItem in item.children" :key="textItem.label">{{ textItem.label }}</h2>
-        </hgroup>
-      </el-carousel-item>
-    </el-carousel>
-  </header>
+<!--  <header v-else>-->
+<!--    <el-carousel :arrow="arrow">-->
+<!--      <el-carousel-item v-for="(item,index) in module.mobileText" :key="index" :style="`background-image:url(${module.style[index].value})`">-->
+<!--        <hgroup>-->
+<!--          <h2 v-for="textItem in item.children" :key="textItem.label">{{ textItem.label }}</h2>-->
+<!--        </hgroup>-->
+<!--      </el-carousel-item>-->
+<!--    </el-carousel>-->
+<!--  </header>-->
 </template>
 
 <script>
@@ -63,6 +61,12 @@
               property:'img'
             },
           ],
+          article:[
+            {
+              pic:'http://gxcl-shop.qiniu.520mro.com/fmol52kmnfawuut4r7oz.png',
+              content:'<h1 class="ql-align-center"><span style="color: rgb(255, 255, 255);" class="ql-size-huge">用匠心和智慧打造软件精品</span></h1><p><br></p>'
+            }
+          ],
           mobileText:[
             {
               label:'轮播1',
@@ -104,40 +108,9 @@
               ]
             }
           ],
-          text:[
-            {
-              label:'轮播1',
-              children:[
-                {
-                  label:'用匠心和智慧打造软件精品'
-                },
-                {
-                  label:''
-                },
-              ]
-            },
-            {
-              label:'轮播2',
-              children:[
-                {
-                  label:'可靠的技术架构、流畅的用户体验、'
-                },
-                {
-                  label:'贴心的客户服务'
-                },
-              ]
-            },
-            {
-              label:'轮播3',
-              children:[
-                {
-                  label:'践行梅花精神，不畏艰难，'
-                },
-                {
-                  label:'撬动浩瀚的IT宇宙'
-                },
-              ]
-            }
+          info:[
+                  '图片：文章缩略图',
+                  '内部文字：文章内容'
           ]
         },
         // imgUrl:['./image/index/e-erp.png','./image/index/Saas.png','./image/index/WMS.png','./image/index/erp.png']

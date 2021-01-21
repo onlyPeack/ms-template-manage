@@ -9,7 +9,7 @@
                     </a>
                 </h1>
                 <div class="fl logo_text">
-                    <div>懂你所需，做你所想</div>
+                    <div>{{module.text[1].children[0].value}}</div>
                     <div id="choiceLanguage"><a href="javascript:void(0)">
                         <span class="languageChinese">中</span>
                         <img src="http://www.hejigy.com/Img/language/line.png" alt="">
@@ -57,7 +57,6 @@
                     text: [
                         {
                             label: '文字组合1',
-                            type: 'nav',
                             children: [
                                 {
                                     label: '首页',
@@ -84,6 +83,14 @@
                                 }, {
                                     label: '下载中心',
                                     link: '#'
+                                }
+                            ]
+                        },{
+                            label: '文字组合2',
+                            children: [
+                                {
+                                    label: 'logo副标题',
+                                    value:'懂你所需，做你所想',
                                 }
                             ]
                         }
