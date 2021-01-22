@@ -7,7 +7,7 @@
                 <span v-for="(item,index) in module.article" v-bind:key="item.name" :class="{'active-title':index===activeIndex}" @click="activeIndex=index">{{item.name}}</span>
             </div>
             <div class="hj-service-content-main">
-                <div v-for="item in module.article[activeIndex].children" v-bind:key="item.title">
+                <div v-for="item in module.article[activeIndex].children" v-bind:key="item.title" @click="linkClick(item.id,'article')">
                     <img :src="item.pic" :alt="item.title">
                     <h3>{{item.title}}</h3>
                 </div>

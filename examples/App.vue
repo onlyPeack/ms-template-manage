@@ -16,13 +16,13 @@
 <!--        <hj-footer></hj-footer>-->
 <!--        <hj-news-detail @linkClick="testMethod"></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
-<!--        <hj-service></hj-service>-->
+        <hj-service></hj-service>
 <!--        <hj-connect></hj-connect>-->
 <!--        <hj-brand></hj-brand>-->
 <!--        <ms-self-scroll></ms-self-scroll>-->
 <!--        <hj-news></hj-news>-->
 <!--        <hj-join-us></hj-join-us>-->
-        <hj-goods-detail></hj-goods-detail>
+<!--        <hj-goods-detail></hj-goods-detail>-->
     </div>
 </template>
 
