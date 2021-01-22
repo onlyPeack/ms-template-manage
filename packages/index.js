@@ -22,6 +22,9 @@ import hjAbout from './hj-about'
 import hjConnect from './hj-connect'
 import msImg from './ms-img'
 import hjNewsDetail from './hj-news-detail'
+import hjGoodsDetail from './hj-goods-detail'
+
+
 
 /*基础*/
 import msDetailGenshin from './ms-detail-genshin'
@@ -62,7 +65,8 @@ const components = [
     hjIndex1,
     hjBrand,
     hjBanner,
-    msSelfScroll
+    msSelfScroll,
+    hjGoodsDetail
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册

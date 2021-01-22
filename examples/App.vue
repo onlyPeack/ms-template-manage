@@ -13,7 +13,7 @@
 <!--        <hj-index-3></hj-index-3>-->
 <!--        <hj-index-4></hj-index-4>-->
 <!--        <hj-index-5></hj-index-5>-->
-        <hj-footer></hj-footer>
+<!--        <hj-footer></hj-footer>-->
 <!--        <hj-news-detail @linkClick="testMethod"></hj-news-detail>-->
 <!--        <hj-download></hj-download>-->
 <!--        <hj-service></hj-service>-->
@@ -22,6 +22,7 @@
 <!--        <ms-self-scroll></ms-self-scroll>-->
 <!--        <hj-news></hj-news>-->
 <!--        <hj-join-us></hj-join-us>-->
+        <hj-goods-detail></hj-goods-detail>
     </div>
 </template>
 
