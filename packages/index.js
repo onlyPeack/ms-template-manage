@@ -25,7 +25,6 @@ import hjNewsDetail from './hj-news-detail'
 import hjGoodsDetail from './hj-goods-detail'
 
 
-
 /*基础*/
 import msDetailGenshin from './ms-detail-genshin'
 import hjHead from './hj-head'
@@ -35,6 +34,9 @@ import msSelfHead from './ms-self-head'
 import msSelfFooter from './ms-self-footer'
 import msSelfAside from './ms-self-aside'
 
+
+/*组件*/
+import imgPreview from './img-preview'
 
 //导入组件公共方法
 import mixins from "../src/mixins/default";
@@ -66,7 +68,8 @@ const components = [
     hjBrand,
     hjBanner,
     msSelfScroll,
-    hjGoodsDetail
+    hjGoodsDetail,
+    imgPreview
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册

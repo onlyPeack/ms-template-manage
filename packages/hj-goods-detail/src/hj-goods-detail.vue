@@ -6,7 +6,7 @@
 
         <div class="hj-goods-detail-title">
             <div class="img-content">
-                <img :src="module.detail.mid.pic" :alt="module.detail.mid.title">
+                <img :src="module.detail.mid.pic" :alt="module.detail.mid.pititle">
                 <span>产品图片仅供参考，以右边产品信息为准。</span>
             </div>
             <div class="goods-title">

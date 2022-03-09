@@ -1,6 +1,6 @@
 {
   "name": "ms-template-manage",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "private": false,
   "main": "lib/index/index.js",
   "scripts": {
@@ -16,6 +16,10 @@
     "jquery": "^3.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onlyPeack/ms-template-manage"
   },
   "jest": {
     "testEnvironment": "jsdom",
